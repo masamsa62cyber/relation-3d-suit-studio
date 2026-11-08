@@ -331,12 +331,12 @@ window.R = window.R || {};
   const PB = (R.BRAND_DATA && R.BRAND_DATA.paidButtons) || [];
   const buttons = ((R.SWATCHES && R.SWATCHES.buttons) || []).map(x => ({
     id: x.code, label: x.code, src: 'ref', photo: x.photo, color: x.color, sheen: x.metal ? .28 : .38, metal: !!x.metal, paid: x.paid,
-    group: `${x.name}(${x.paid ? '有料' : '無料'})`, detail: x.note,
+    group: x.name, detail: x.note,
   }));
   // 写真のない無料シリーズ・有料シリーズ(料金表のみ)
-  buttons.push({ id: 'F', label: 'Fボタン', src: 'ref', color: '#1c1f24', sheen: .38, group: 'Fボタン(無料・写真なし)', detail: '品番はメモで指定' });
+  buttons.push({ id: 'F', label: 'Fボタン', src: 'ref', color: '#1c1f24', sheen: .38, group: 'Fボタン(写真なし)', detail: '品番はメモで指定' });
   for (const b of PB) if (!buttons.some(x => x.paid === b.id) || b.group !== '有料ボタン')
-    buttons.push({ id: b.id, label: b.label, src: 'ref', color: '#22252a', sheen: .38, metal: /メタル/.test(b.label), paid: b.id, group: b.group === '有料ボタン' ? '有料ボタン(写真なし)' : b.group, detail: b.detail });
+    buttons.push({ id: b.id, label: b.label, src: 'ref', color: '#22252a', sheen: .38, metal: /メタル/.test(b.label), paid: b.id, group: b.group === '有料ボタン' ? 'その他のボタン(写真なし)' : b.group, detail: b.detail });
 
   const stitchWidth = [
     ['01', 'ナシ', 0], ['02', '7mm', 7], ['03', '10mm', 10], ['04', 'コバ', 2], ['05', '5mm', 5], ['06', 'コバ+8mm', 2, 8], ['07', 'コバ+10mm', 2, 10], ['08', 'レール9mm+3mm', 3, 9], ['14', 'ピックステッチ(コバ)', 2, 0, 'pick'], ['15', 'ピックステッチ(5mm)', 5, 0, 'pick'],
@@ -399,7 +399,7 @@ window.R = window.R || {};
     ] },
     { key: 'lining', sec: '裏', label: '裏地', type: 'fabric', role: 'lining', focus: { inside: true } },
     { key: 'paidLining', sec: '裏', label: '有料裏地', type: 'paidLining', options: [O('none', 'なし')].concat((R.BRAND_DATA && R.BRAND_DATA.paidLinings || []).map(g => Object.assign(O(g.id, g.label), { maker: g.maker, prices: g.prices }))), focus: { inside: true } },
-    { key: 'button', sec: 'ボタン', label: 'ボタン', options: buttons, swatch: true, focus: { view: 'front' }, note: '見本帳の写真から選べます。有料のシリーズは見積もりで作り方ごとの金額が付きます。天然素材は一個ずつ色・柄・形状が微妙に異なります。' },
+    { key: 'button', sec: 'ボタン', label: 'ボタン', options: buttons, swatch: true, focus: { view: 'front' }, note: '見本帳の写真から選べます。天然素材は一個ずつ色・柄・形状が微妙に異なります。' },
   ];
 
   /* ---------- ベスト ---------- */
@@ -3812,7 +3812,6 @@ window.R = window.R || {};
     <div class="spacer"></div>
     <span class="store-badge" id="badge"><i></i><span id="badgeT">端末内</span></span>
     <button class="tbtn" id="bFab" type="button" aria-label="生地管理" title="生地管理"><span class="ico">布</span><span class="lb">生地管理</span></button>
-    <button class="tbtn" id="bLooks" type="button" aria-label="呼び出し" title="呼び出し"><span class="ico">読</span><span class="lb">呼び出し</span></button>
     <button class="tbtn" id="bImg" type="button" aria-label="画像" title="画像"><span class="ico">画</span><span class="lb">画像</span></button>
     <button class="tbtn" id="bEst" type="button" aria-label="見積もり" title="見積もり"><span class="ico">見</span><span class="lb">見積もり</span></button>
     <button class="tbtn primary" id="bSave" type="button" aria-label="保存" title="保存"><span class="ico">保</span><span class="lb">保存</span></button>
@@ -4423,7 +4422,6 @@ window.R = window.R || {};
 
   $('#bSave').onclick = openSave;
   $('#bEst').onclick = () => openEstimate();
-  $('#bLooks').onclick = openLooks;
   $('#bImg').onclick = openImage;
   $('#bFab').onclick = () => openFabricAdmin();
 
@@ -4478,13 +4476,13 @@ window.R = window.R || {};
     bkind = est.tab === 'lining' ? 'lining' : 'outer';
     const paidCards = key => { const it = R.CAT.jacket.find(i => i.key === key), cur = st.jacket[key], groups = [...new Set(it.options.map(o => o.group || o.maker || ''))];
       return groups.map(gr => `${gr ? `<h3 class="esect">${esc(gr)}</h3>` : ''}<div class="egrid">${it.options.filter(o => (o.group || o.maker || '') === gr).map(o => `<div class="ecard ${o.id === cur ? 'on' : ''}"><button type="button" class="epick" data-paid="${key}" data-id="${esc(o.id)}" aria-pressed="${o.id === cur}"><span class="et"><b>${esc(o.label)}</b><small>${esc(o.detail || '')}</small></span></button></div>`).join('')}</div>`).join(''); };
-    const freeTag = v => v == null ? '<span class="unset">無料</span>' : yen(v);
+    const freeTag = v => v == null ? '' : yen(v);
     if (est.tab === 'fabric' && B().brand) body = brandChips(B().brand) + brandBrowser(st.jacket.fabric, 'data-pickb');
     else if (est.tab === 'fabric') body = brandChips('') + `<input class="input esearch" id="eq" type="search" placeholder="生地名・品番・ブランドで検索" value="${esc(est.q)}"><div class="egrid">${fabs.filter(hit).map(f => card('fabric', f.id, st.jacket.fabric === f.id, `background-image:${swatch(f)}`, f.name, [f.code, f.brand].filter(Boolean).join(' / '), priceOf.fabric(f))).join('') || '<p class="empty">該当する生地がありません</p>'}</div>`;
     else if (est.tab === 'lining') body = `<h3 class="esect">裏地</h3>` + brandChips(B().brand) + (B().brand ? brandBrowser(st.jacket.lining, 'data-pickl') : `<div class="egrid">${lins.map(f => card('lining', f.id, st.jacket.lining === f.id, `background-image:${swatch(f)}`, f.name, [f.code, f.brand].filter(Boolean).join(' / '), priceOf.fabric(f))).join('')}</div>`)
       + `<h3 class="esect">有料裏地</h3>` + paidCards('paidLining') + (st.jacket.paidLining !== 'none' ? (() => { const nos = R.Brands.paidLiningNos(st.jacket.paidLining); return `<h3 class="esect">有料裏地の品番</h3><input class="input esearch" id="ePlNo" list="ePlNos" maxlength="30" placeholder="品番を入力(任意)" value="${esc(st.jacket.paidLiningNo || '')}"><datalist id="ePlNos">${nos.map(x => `<option value="${esc(x.code)}">`).join('')}</datalist>${nos.length ? `<div class="chips" style="padding:0">${nos.map(x => `<button type="button" class="chip ${st.jacket.paidLiningNo === x.code ? 'on' : ''}" data-pln="${esc(x.code)}">${esc(x.code)}${x.status !== '在庫あり' ? ' ' + esc(x.status) : ''}</button>`).join('')}</div>` : ''}`; })() : '');
     else if (est.tab === 'button') { const opts = R.CAT.jacket.find(i => i.key === 'button').options, groups = [...new Set(opts.map(o => o.group))];
-      body = groups.map(gr => `<h3 class="esect">${esc(gr)}</h3><div class="bgrid">${opts.filter(o => o.group === gr).map(o => `<button type="button" class="bcard ${st.jacket.button === o.id ? 'on' : ''}" data-pick="button" data-id="${esc(o.id)}" aria-pressed="${st.jacket.button === o.id}">${o.photo ? `<img src="${o.photo}" alt="" loading="lazy">` : `<span class="bdot" style="background:${o.color}"></span>`}<b>${esc(o.label)}</b>${o.detail ? `<small>${esc(o.detail)}</small>` : ''}</button>`).join('')}</div>`).join('') + '<p class="note">有料のボタンは、作り方ごとの金額が見積もり明細に入ります。</p>'; }
+      body = groups.map(gr => `<h3 class="esect">${esc(gr)}</h3><div class="bgrid">${opts.filter(o => o.group === gr).map(o => `<button type="button" class="bcard ${st.jacket.button === o.id ? 'on' : ''}" data-pick="button" data-id="${esc(o.id)}" aria-pressed="${st.jacket.button === o.id}">${o.photo ? `<img src="${o.photo}" alt="" loading="lazy">` : `<span class="bdot" style="background:${o.color}"></span>`}<b>${esc(o.label)}</b>${o.detail ? `<small>${esc(o.detail)}</small>` : ''}</button>`).join('')}</div>`).join('') ; }
     else if (est.tab === 'make') body = makePicker();
     else body = R.OPTION_GROUPS.map(g => `<h3 class="esect">${esc(g.label)}</h3><div class="optlist">${R.OPTION_PRICES.filter(o => o.group === g.id).map(o => `<label class="optrow ${st.options[o.id] ? 'on' : ''} ${linkOf(o.id) ? 'linked' : ''}"><input type="checkbox" data-eop="${o.id}" ${st.options[o.id] ? 'checked' : ''} ${linkOf(o.id) ? 'disabled' : ''}><span class="n">${esc(o.label)}${linkOf(o.id) ? `<small>自動: ${esc(linkOf(o.id).why)}</small>` : ''}</span><span class="p">${o.fabricKey ? (() => { const f = Store.fabric(st.jacket.fabric); const v = f && f.brandFabric ? R.Brands.price(f, o.fabricKey) : null; return v == null ? '<span class="unset">生地の料金表で決まります</span>' : yen(v); })() : yenOr(o.price, o.note)}</span></label>`).join('')}</div>`).join('');
     const tabs = [['make', '作り方'], ['fabric', '生地'], ['button', 'ボタン'], ['lining', '裏地'], ['option', 'オプション']];
