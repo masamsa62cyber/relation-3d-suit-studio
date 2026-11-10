@@ -171,6 +171,8 @@ button{cursor:pointer;background:none;border:0;padding:0}
 .ehead h2{font-family:var(--serif);font-size:20px;font-weight:600;color:var(--accent);margin:0;white-space:nowrap}
 .ebody{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1fr) 380px;overflow:hidden}
 .emain{overflow:auto;padding:14px 16px 24px}
+.ebody.only{display:block;overflow:auto}
+.ebody.only .esum{max-width:760px;margin:0 auto;border:0;max-height:none;min-height:100%}
 .esum{overflow:auto;background:var(--panel);border-left:1px solid var(--line);padding:16px}
 .esum h3{font-size:13px;letter-spacing:.1em;color:var(--mute);margin:0 0 8px}
 .etabs{display:flex;gap:0;border:1px solid var(--line);border-radius:3px;background:var(--panel);margin-bottom:12px;width:max-content;max-width:100%}
@@ -276,6 +278,7 @@ button{cursor:pointer;background:none;border:0;padding:0}
 .bcard:hover{background:var(--panel-2)}
 .bcard.on{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
 .bcard img,.bcard .bdot{width:56px;height:56px;border-radius:50%;object-fit:cover;display:block}
+.lgrid .bcard img{width:100%;height:72px;border-radius:3px}
 .bcard b{font-size:12.5px}.bcard small{font-size:10px;color:var(--mute);line-height:1.3}
 </style>
 <div id="app"></div>
@@ -290,6 +293,1328 @@ R.BRAND_DATA = {"generated":"2026-11-08","stockPage":"https://hosoisyojiraxa.com
 /* 見本帳の写真から切り抜いたボタン・裏地(tools/ と dist/sw/。写真はRelation提供) */
 window.R = window.R || {};
 R.SWATCHES = {"buttons":[{"code":"R12","series":"R","name":"Rボタン","paid":null,"note":"C,D,Eメイク標準","photo":"sw/b-R12.jpg","color":"#b5b091","metal":false},{"code":"R41","series":"R","name":"Rボタン","paid":null,"note":"C,D,Eメイク標準","photo":"sw/b-R41.jpg","color":"#947c42","metal":false},{"code":"R45","series":"R","name":"Rボタン","paid":null,"note":"C,D,Eメイク標準","photo":"sw/b-R45.jpg","color":"#463219","metal":false},{"code":"R48","series":"R","name":"Rボタン","paid":null,"note":"C,D,Eメイク標準","photo":"sw/b-R48.jpg","color":"#1e201e","metal":false},{"code":"R66","series":"R","name":"Rボタン","paid":null,"note":"C,D,Eメイク標準","photo":"sw/b-R66.jpg","color":"#161b1b","metal":false},{"code":"R28","series":"R","name":"Rボタン","paid":null,"note":"C,D,Eメイク標準","photo":"sw/b-R28.jpg","color":"#2f2b2b","metal":false},{"code":"R92","series":"R","name":"Rボタン","paid":null,"note":"C,D,Eメイク標準","photo":"sw/b-R92.jpg","color":"#69685d","metal":false},{"code":"R96","series":"R","name":"Rボタン","paid":null,"note":"C,D,Eメイク標準","photo":"sw/b-R96.jpg","color":"#1e2428","metal":false},{"code":"R98","series":"R","name":"Rボタン","paid":null,"note":"C,D,Eメイク標準","photo":"sw/b-R98.jpg","color":"#080e15","metal":false},{"code":"R99","series":"R","name":"Rボタン","paid":null,"note":"C,D,Eメイク標準","photo":"sw/b-R99.jpg","color":"#0b1015","metal":false},{"code":"R53","series":"R","name":"Rボタン","paid":null,"note":"C,D,Eメイク標準","photo":"sw/b-R53.jpg","color":"#171f26","metal":false},{"code":"R58","series":"R","name":"Rボタン","paid":null,"note":"C,D,Eメイク標準","photo":"sw/b-R58.jpg","color":"#363939","metal":false},{"code":"RN1","series":"R","name":"Rボタン(フォーマル用)","paid":null,"note":"C,D,Eメイク標準 フォーマル用","photo":"sw/b-RN1.jpg","color":"#090e16","metal":false},{"code":"Y40","series":"Y","name":"Yボタン","paid":null,"note":"","photo":"sw/b-Y40.jpg","color":"#afa88f","metal":false},{"code":"Y41","series":"Y","name":"Yボタン","paid":null,"note":"","photo":"sw/b-Y41.jpg","color":"#86754b","metal":false},{"code":"Y48","series":"Y","name":"Yボタン","paid":null,"note":"","photo":"sw/b-Y48.jpg","color":"#191d1f","metal":false},{"code":"Y63","series":"Y","name":"Yボタン","paid":null,"note":"","photo":"sw/b-Y63.jpg","color":"#5b5a44","metal":false},{"code":"Y28","series":"Y","name":"Yボタン","paid":null,"note":"","photo":"sw/b-Y28.jpg","color":"#48242b","metal":false},{"code":"Y09","series":"Y","name":"Yボタン","paid":null,"note":"","photo":"sw/b-Y09.jpg","color":"#191b1a","metal":false},{"code":"Y03","series":"Y","name":"Yボタン","paid":null,"note":"","photo":"sw/b-Y03.jpg","color":"#424343","metal":false},{"code":"Y07","series":"Y","name":"Yボタン","paid":null,"note":"","photo":"sw/b-Y07.jpg","color":"#292f32","metal":false},{"code":"Y08","series":"Y","name":"Yボタン","paid":null,"note":"","photo":"sw/b-Y08.jpg","color":"#101519","metal":false},{"code":"Y54","series":"Y","name":"Yボタン","paid":null,"note":"","photo":"sw/b-Y54.jpg","color":"#152138","metal":false},{"code":"Y58","series":"Y","name":"Yボタン","paid":null,"note":"","photo":"sw/b-Y58.jpg","color":"#10161f","metal":false},{"code":"T40","series":"T","name":"Tボタン","paid":null,"note":"","photo":"sw/b-T40.jpg","color":"#a79d80","metal":false},{"code":"T42","series":"T","name":"Tボタン","paid":null,"note":"","photo":"sw/b-T42.jpg","color":"#76674c","metal":false},{"code":"T48","series":"T","name":"Tボタン","paid":null,"note":"","photo":"sw/b-T48.jpg","color":"#191a19","metal":false},{"code":"T53","series":"T","name":"Tボタン","paid":null,"note":"","photo":"sw/b-T53.jpg","color":"#46525e","metal":false},{"code":"T58","series":"T","name":"Tボタン","paid":null,"note":"","photo":"sw/b-T58.jpg","color":"#232730","metal":false},{"code":"T65","series":"T","name":"Tボタン","paid":null,"note":"","photo":"sw/b-T65.jpg","color":"#1c2622","metal":false},{"code":"T93","series":"T","name":"Tボタン","paid":null,"note":"","photo":"sw/b-T93.jpg","color":"#737472","metal":false},{"code":"T98","series":"T","name":"Tボタン","paid":null,"note":"","photo":"sw/b-T98.jpg","color":"#1c2023","metal":false},{"code":"T09","series":"T","name":"Tボタン","paid":null,"note":"","photo":"sw/b-T09.jpg","color":"#121619","metal":false},{"code":"T26","series":"T","name":"Tボタン","paid":null,"note":"","photo":"sw/b-T26.jpg","color":"#372b2b","metal":false},{"code":"P06","series":"P","name":"Pボタン","paid":null,"note":"","photo":"sw/b-P06.jpg","color":"#9f834d","metal":false},{"code":"PM2","series":"P","name":"Pボタン","paid":null,"note":"","photo":"sw/b-PM2.jpg","color":"#1b212d","metal":false},{"code":"PN4","series":"P","name":"Pボタン","paid":null,"note":"","photo":"sw/b-PN4.jpg","color":"#2b323a","metal":false},{"code":"PG2","series":"P","name":"Pボタン","paid":null,"note":"","photo":"sw/b-PG2.jpg","color":"#2a2c27","metal":false},{"code":"PN3","series":"P","name":"Pボタン","paid":null,"note":"","photo":"sw/b-PN3.jpg","color":"#1f2125","metal":false},{"code":"PN2","series":"P","name":"Pボタン","paid":null,"note":"","photo":"sw/b-PN2.jpg","color":"#192025","metal":false},{"code":"PN1","series":"P","name":"Pボタン","paid":null,"note":"","photo":"sw/b-PN1.jpg","color":"#15191d","metal":false},{"code":"MON","series":"MON","name":"モーニング用","paid":null,"note":"","photo":"sw/b-MON.jpg","color":"#161a1d","metal":false},{"code":"TXD","series":"TXD","name":"タキシード用","paid":null,"note":"","photo":"sw/b-TXD.jpg","color":"#1d1f20","metal":false},{"code":"L15","series":"L","name":"Lボタン","paid":"pb-LJ","note":"","photo":"sw/b-L15.jpg","color":"#25394f","metal":false},{"code":"L16","series":"L","name":"Lボタン","paid":"pb-LJ","note":"","photo":"sw/b-L16.jpg","color":"#9d8893","metal":false},{"code":"L17","series":"L","name":"Lボタン","paid":"pb-LJ","note":"","photo":"sw/b-L17.jpg","color":"#60263c","metal":false},{"code":"L18","series":"L","name":"Lボタン","paid":"pb-LJ","note":"","photo":"sw/b-L18.jpg","color":"#475051","metal":false},{"code":"L19","series":"L","name":"Lボタン","paid":"pb-LJ","note":"","photo":"sw/b-L19.jpg","color":"#343142","metal":false},{"code":"L21","series":"L","name":"Lボタン","paid":"pb-LJ","note":"","photo":"sw/b-L21.jpg","color":"#37424f","metal":false},{"code":"L22","series":"L","name":"Lボタン","paid":"pb-LJ","note":"","photo":"sw/b-L22.jpg","color":"#756e5b","metal":false},{"code":"L23","series":"L","name":"Lボタン","paid":"pb-LJ","note":"","photo":"sw/b-L23.jpg","color":"#091624","metal":false},{"code":"L24","series":"L","name":"Lボタン","paid":"pb-LJ","note":"","photo":"sw/b-L24.jpg","color":"#24303c","metal":false},{"code":"L25","series":"L","name":"Lボタン","paid":"pb-LJ","note":"","photo":"sw/b-L25.jpg","color":"#091625","metal":false},{"code":"L29","series":"L","name":"Lボタン","paid":"pb-LJ","note":"","photo":"sw/b-L29.jpg","color":"#161824","metal":false},{"code":"L30","series":"L","name":"Lボタン","paid":"pb-LJ","note":"","photo":"sw/b-L30.jpg","color":"#b3a66e","metal":false},{"code":"L31","series":"L","name":"Lボタン","paid":"pb-LJ","note":"","photo":"sw/b-L31.jpg","color":"#534649","metal":false},{"code":"L32","series":"L","name":"Lボタン","paid":"pb-LJ","note":"","photo":"sw/b-L32.jpg","color":"#8f7e58","metal":false},{"code":"L33","series":"L","name":"Lボタン","paid":"pb-LJ","note":"","photo":"sw/b-L33.jpg","color":"#101d2a","metal":false},{"code":"L36","series":"L","name":"Lボタン","paid":"pb-LJ","note":"","photo":"sw/b-L36.jpg","color":"#8d2936","metal":false},{"code":"L38","series":"L","name":"Lボタン","paid":"pb-LJ","note":"","photo":"sw/b-L38.jpg","color":"#59807c","metal":false},{"code":"L40","series":"L","name":"Lボタン","paid":"pb-LJ","note":"","photo":"sw/b-L40.jpg","color":"#a4a394","metal":false},{"code":"L41","series":"L","name":"Lボタン","paid":"pb-LJ","note":"","photo":"sw/b-L41.jpg","color":"#5f5240","metal":false},{"code":"L42","series":"L","name":"Lボタン","paid":"pb-LJ","note":"","photo":"sw/b-L42.jpg","color":"#7f5e37","metal":false},{"code":"L43","series":"L","name":"Lボタン","paid":"pb-LJ","note":"","photo":"sw/b-L43.jpg","color":"#1a1e22","metal":false},{"code":"L50","series":"L","name":"Lボタン","paid":"pb-LJ","note":"","photo":"sw/b-L50.jpg","color":"#afac81","metal":false},{"code":"L52","series":"L","name":"Lボタン","paid":"pb-LJ","note":"","photo":"sw/b-L52.jpg","color":"#574529","metal":false},{"code":"L53","series":"L","name":"Lボタン","paid":"pb-LJ","note":"","photo":"sw/b-L53.jpg","color":"#1d2125","metal":false},{"code":"L60","series":"L","name":"Lボタン","paid":"pb-LJ","note":"","photo":"sw/b-L60.jpg","color":"#b4af84","metal":false},{"code":"L61","series":"L","name":"Lボタン","paid":"pb-LJ","note":"","photo":"sw/b-L61.jpg","color":"#594c38","metal":false},{"code":"L63","series":"L","name":"Lボタン","paid":"pb-LJ","note":"","photo":"sw/b-L63.jpg","color":"#262b2e","metal":false},{"code":"L71","series":"L","name":"Lボタン","paid":"pb-LJ","note":"","photo":"sw/b-L71.jpg","color":"#181816","metal":false},{"code":"L72","series":"L","name":"Lボタン","paid":"pb-LJ","note":"","photo":"sw/b-L72.jpg","color":"#4f422b","metal":false},{"code":"L73","series":"L","name":"Lボタン","paid":"pb-LJ","note":"","photo":"sw/b-L73.jpg","color":"#444442","metal":false},{"code":"J40","series":"J","name":"Jボタン","paid":"pb-LJ","note":"","photo":"sw/b-J40.jpg","color":"#c5be95","metal":false},{"code":"J44","series":"J","name":"Jボタン","paid":"pb-LJ","note":"","photo":"sw/b-J44.jpg","color":"#5d4829","metal":false},{"code":"J48","series":"J","name":"Jボタン","paid":"pb-LJ","note":"","photo":"sw/b-J48.jpg","color":"#282621","metal":false},{"code":"J04","series":"J","name":"Jボタン","paid":"pb-LJ","note":"","photo":"sw/b-J04.jpg","color":"#636359","metal":false},{"code":"J08","series":"J","name":"Jボタン","paid":"pb-LJ","note":"","photo":"sw/b-J08.jpg","color":"#222626","metal":false},{"code":"J56","series":"J","name":"Jボタン","paid":"pb-LJ","note":"","photo":"sw/b-J56.jpg","color":"#1c252c","metal":false},{"code":"J58","series":"J","name":"Jボタン","paid":"pb-LJ","note":"","photo":"sw/b-J58.jpg","color":"#181e24","metal":false},{"code":"J66","series":"J","name":"Jボタン","paid":"pb-LJ","note":"","photo":"sw/b-J66.jpg","color":"#2e3024","metal":false},{"code":"J28","series":"J","name":"Jボタン","paid":"pb-LJ","note":"","photo":"sw/b-J28.jpg","color":"#472a23","metal":false},{"code":"J09","series":"J","name":"Jボタン","paid":"pb-LJ","note":"","photo":"sw/b-J09.jpg","color":"#0f1211","metal":false},{"code":"BG3","series":"BG","name":"メタルボタン","paid":"pb-METAL","note":"","photo":"sw/b-BG3.jpg","color":"#958b5f","metal":true},{"code":"BS6","series":"BS","name":"メタルボタン","paid":"pb-METAL","note":"","photo":"sw/b-BS6.jpg","color":"#50504b","metal":true},{"code":"BB","series":"BB","name":"メタルボタン","paid":"pb-METAL","note":"","photo":"sw/b-BB.jpg","color":"#525450","metal":true},{"code":"VJ6","series":"VJ","name":"VJボタン","paid":"pb-VJ","note":"本水牛","photo":"sw/b-VJ6.jpg","color":"#554939","metal":false},{"code":"VJ7","series":"VJ","name":"VJボタン","paid":"pb-VJ","note":"本水牛","photo":"sw/b-VJ7.jpg","color":"#171a1e","metal":false},{"code":"VX2","series":"VX","name":"VXボタン","paid":"pb-VX","note":"本水牛","photo":"sw/b-VX2.jpg","color":"#7e6c48","metal":false},{"code":"VX4","series":"VX","name":"VXボタン","paid":"pb-VX","note":"本水牛","photo":"sw/b-VX4.jpg","color":"#211f22","metal":false},{"code":"VX5","series":"VX","name":"VXボタン","paid":"pb-VX","note":"本水牛","photo":"sw/b-VX5.jpg","color":"#1a1b1d","metal":false},{"code":"NBY","series":"NB","name":"NBボタン","paid":"pb-NBG","note":"本ナット バイカラー","photo":"sw/b-NBY.jpg","color":"#080b10","metal":false},{"code":"NBL","series":"NB","name":"NBボタン","paid":"pb-NBG","note":"本ナット バイカラー","photo":"sw/b-NBL.jpg","color":"#070d12","metal":false},{"code":"NBR","series":"NB","name":"NBボタン","paid":"pb-NBG","note":"本ナット バイカラー","photo":"sw/b-NBR.jpg","color":"#080a0d","metal":false},{"code":"H46","series":"H","name":"Hボタン","paid":"pb-H","note":"本ナット","photo":"sw/b-H46.jpg","color":"#1c130f","metal":false},{"code":"H58","series":"H","name":"Hボタン","paid":"pb-H","note":"本ナット","photo":"sw/b-H58.jpg","color":"#060b13","metal":false},{"code":"H43","series":"H","name":"Hボタン","paid":"pb-H","note":"本ナット","photo":"sw/b-H43.jpg","color":"#946117","metal":false},{"code":"H09","series":"H","name":"Hボタン","paid":"pb-H","note":"本ナット","photo":"sw/b-H09.jpg","color":"#090d12","metal":false},{"code":"N01","series":"N","name":"Nボタン","paid":"pb-N","note":"本水牛","photo":"sw/b-N01.jpg","color":"#212223","metal":false},{"code":"N02","series":"N","name":"Nボタン","paid":"pb-N","note":"本水牛","photo":"sw/b-N02.jpg","color":"#262323","metal":false},{"code":"N03","series":"N","name":"Nボタン","paid":"pb-N","note":"本水牛","photo":"sw/b-N03.jpg","color":"#403228","metal":false},{"code":"N05","series":"N","name":"Nボタン","paid":"pb-N","note":"本水牛","photo":"sw/b-N05.jpg","color":"#23272a","metal":false}],"linings":[{"code":"K78","group":"K キュプラ無地","material":"キュプラ100%","order":"K / 78","photo":"sw/l-K78.jpg","color":"#a5a282"},{"code":"K27","group":"K キュプラ無地","material":"キュプラ100%","order":"K / 27","photo":"sw/l-K27.jpg","color":"#4f4d3f"},{"code":"K29","group":"K キュプラ無地","material":"キュプラ100%","order":"K / 29","photo":"sw/l-K29.jpg","color":"#31291d"},{"code":"K52","group":"K キュプラ無地","material":"キュプラ100%","order":"K / 52","photo":"sw/l-K52.jpg","color":"#494b3e"},{"code":"K54","group":"K キュプラ無地","material":"キュプラ100%","order":"K / 54","photo":"sw/l-K54.jpg","color":"#2d2d2b"},{"code":"K56","group":"K キュプラ無地","material":"キュプラ100%","order":"K / 56","photo":"sw/l-K56.jpg","color":"#252625"},{"code":"K39","group":"K キュプラ無地","material":"キュプラ100%","order":"K / 39","photo":"sw/l-K39.jpg","color":"#2e4c63"},{"code":"K45","group":"K キュプラ無地","material":"キュプラ100%","order":"K / 45","photo":"sw/l-K45.jpg","color":"#242c40"},{"code":"K47","group":"K キュプラ無地","material":"キュプラ100%","order":"K / 47","photo":"sw/l-K47.jpg","color":"#1f222b"},{"code":"K14","group":"K キュプラ無地","material":"キュプラ100%","order":"K / 14","photo":"sw/l-K14.jpg","color":"#602024"},{"code":"ケ114","group":"ケ ベンベルグ太綾","material":"キュプラ100%","order":"ケ / 114","photo":"sw/l-KE114.jpg","color":"#9b8d62"},{"code":"ケ41","group":"ケ ベンベルグ太綾","material":"キュプラ100%","order":"ケ / 41","photo":"sw/l-KE41.jpg","color":"#644956"},{"code":"ケ34","group":"ケ ベンベルグ太綾","material":"キュプラ100%","order":"ケ / 34","photo":"sw/l-KE34.jpg","color":"#3a5559"},{"code":"ケ490","group":"ケ ベンベルグ太綾","material":"キュプラ100%","order":"ケ / 490","photo":"sw/l-KE490.jpg","color":"#5a5a57"},{"code":"ケ24","group":"ケ ベンベルグ太綾","material":"キュプラ100%","order":"ケ / 24","photo":"sw/l-KE24.jpg","color":"#3a3220"},{"code":"ケ17","group":"ケ ベンベルグ太綾","material":"キュプラ100%","order":"ケ / 17","photo":"sw/l-KE17.jpg","color":"#692e38"},{"code":"ケ44","group":"ケ ベンベルグ太綾","material":"キュプラ100%","order":"ケ / 44","photo":"sw/l-KE44.jpg","color":"#262a55"},{"code":"ケ30","group":"ケ ベンベルグ太綾","material":"キュプラ100%","order":"ケ / 30","photo":"sw/l-KE30.jpg","color":"#2c2a26"},{"code":"ケ47","group":"ケ ベンベルグ太綾","material":"キュプラ100%","order":"ケ / 47","photo":"sw/l-KE47.jpg","color":"#1e2024"},{"code":"ケ8","group":"ケ ベンベルグ太綾","material":"キュプラ100%","order":"ケ / 8","photo":"sw/l-KE8.jpg","color":"#1a1d1c"},{"code":"サ2","group":"サ ベンベルグ ドット柄","material":"キュプラ100%","order":"サ / 2","photo":"sw/l-SA2.jpg","color":"#7c663e"},{"code":"サ12","group":"サ ベンベルグ ドット柄","material":"キュプラ100%","order":"サ / 12","photo":"sw/l-SA12.jpg","color":"#8b9181"},{"code":"サ15","group":"サ ベンベルグ ドット柄","material":"キュプラ100%","order":"サ / 15","photo":"sw/l-SA15.jpg","color":"#615e40"},{"code":"サ8","group":"サ ベンベルグ ドット柄","material":"キュプラ100%","order":"サ / 8","photo":"sw/l-SA8.jpg","color":"#52121a"},{"code":"サ13","group":"サ ベンベルグ ドット柄","material":"キュプラ100%","order":"サ / 13","photo":"sw/l-SA13.jpg","color":"#656667"},{"code":"サ6","group":"サ ベンベルグ ドット柄","material":"キュプラ100%","order":"サ / 6","photo":"sw/l-SA6.jpg","color":"#575043"},{"code":"サ9","group":"サ ベンベルグ ドット柄","material":"キュプラ100%","order":"サ / 9","photo":"sw/l-SA9.jpg","color":"#693b41"},{"code":"サ10","group":"サ ベンベルグ ドット柄","material":"キュプラ100%","order":"サ / 10","photo":"sw/l-SA10.jpg","color":"#273254"},{"code":"D35","group":"D 飛び柄","material":"キュプラ100%","order":"D / 35","photo":"sw/l-D35.jpg","color":"#b3a38e"},{"code":"D34","group":"D 飛び柄","material":"キュプラ100%","order":"D / 34","photo":"sw/l-D34.jpg","color":"#2d3559"},{"code":"D33","group":"D 飛び柄","material":"キュプラ100%","order":"D / 33","photo":"sw/l-D33.jpg","color":"#676f80"},{"code":"D32","group":"D 飛び柄","material":"キュプラ100%","order":"D / 32","photo":"sw/l-D32.jpg","color":"#666f78"},{"code":"D31","group":"D 飛び柄","material":"キュプラ100%","order":"D / 31","photo":"sw/l-D31.jpg","color":"#88949b"},{"code":"D53","group":"D 飛び柄","material":"キュプラ100%","order":"D / 53","photo":"sw/l-D53.jpg","color":"#7b8076"},{"code":"D51","group":"D 飛び柄","material":"キュプラ100%","order":"D / 51","photo":"sw/l-D51.jpg","color":"#aba38d"},{"code":"D50","group":"D 飛び柄","material":"キュプラ100%","order":"D / 50","photo":"sw/l-D50.jpg","color":"#a5a6a1"},{"code":"D37","group":"D 飛び柄","material":"キュプラ100%","order":"D / 37","photo":"sw/l-D37.jpg","color":"#292427"},{"code":"D36","group":"D 飛び柄","material":"キュプラ100%","order":"D / 36","photo":"sw/l-D36.jpg","color":"#292929"},{"code":"C20","group":"C 市松","material":"キュプラ100%","order":"C / 20","photo":"sw/l-C20.jpg","color":"#8a8f91"},{"code":"C21","group":"C 市松","material":"キュプラ100%","order":"C / 21","photo":"sw/l-C21.jpg","color":"#797e85"},{"code":"C22","group":"C 市松","material":"キュプラ100%","order":"C / 22","photo":"sw/l-C22.jpg","color":"#5f666f"},{"code":"C23","group":"C 市松","material":"キュプラ100%","order":"C / 23","photo":"sw/l-C23.jpg","color":"#5c6173"},{"code":"C24","group":"C 市松","material":"キュプラ100%","order":"C / 24","photo":"sw/l-C24.jpg","color":"#676f81"},{"code":"C25","group":"C 市松","material":"キュプラ100%","order":"C / 25","photo":"sw/l-C25.jpg","color":"#262c44"},{"code":"C27","group":"C 市松","material":"キュプラ100%","order":"C / 27","photo":"sw/l-C27.jpg","color":"#aba088"},{"code":"C29","group":"C 市松","material":"キュプラ100%","order":"C / 29","photo":"sw/l-C29.jpg","color":"#4b4540"},{"code":"C30","group":"C 市松","material":"キュプラ100%","order":"C / 30","photo":"sw/l-C30.jpg","color":"#402f31"},{"code":"A022","group":"4 ペイズリー柄","material":"ポリエステル54%・レーヨン46%","order":"4 / A022","photo":"sw/l-A022.jpg","color":"#a58261"},{"code":"A059","group":"4 ペイズリー柄","material":"ポリエステル54%・レーヨン46%","order":"4 / A059","photo":"sw/l-A059.jpg","color":"#494242"},{"code":"A187","group":"4 ペイズリー柄","material":"ポリエステル54%・レーヨン46%","order":"4 / A187","photo":"sw/l-A187.jpg","color":"#979694"},{"code":"A217","group":"4 ペイズリー柄","material":"ポリエステル54%・レーヨン46%","order":"4 / A217","photo":"sw/l-A217.jpg","color":"#3e4d5d"},{"code":"A057","group":"4 ペイズリー柄","material":"ポリエステル54%・レーヨン46%","order":"4 / A057","photo":"sw/l-A057.jpg","color":"#613d45"},{"code":"A220","group":"4 ペイズリー柄","material":"ポリエステル54%・レーヨン46%","order":"4 / A220","photo":"sw/l-A220.jpg","color":"#2a3034"},{"code":"A180","group":"4 ペイズリー柄","material":"ポリエステル54%・レーヨン46%","order":"4 / A180","photo":"sw/l-A180.jpg","color":"#3a3636"},{"code":"A189","group":"4 ペイズリー柄","material":"ポリエステル54%・レーヨン46%","order":"4 / A189","photo":"sw/l-A189.jpg","color":"#4c4e4f"},{"code":"A218","group":"4 ペイズリー柄","material":"ポリエステル54%・レーヨン46%","order":"4 / A218","photo":"sw/l-A218.jpg","color":"#283039"},{"code":"B044","group":"4 大ダイヤ柄","material":"ポリエステル55%・レーヨン45%","order":"4 / B044","photo":"sw/l-B044.jpg","color":"#75565c"},{"code":"B130","group":"4 大ダイヤ柄","material":"ポリエステル55%・レーヨン45%","order":"4 / B130","photo":"sw/l-B130.jpg","color":"#474e56"},{"code":"B132","group":"4 大ダイヤ柄","material":"ポリエステル55%・レーヨン45%","order":"4 / B132","photo":"sw/l-B132.jpg","color":"#696f71"},{"code":"B508","group":"4 大ダイヤ柄","material":"ポリエステル55%・レーヨン45%","order":"4 / B508","photo":"sw/l-B508.jpg","color":"#6c7083"},{"code":"B-BK","group":"4 大ダイヤ柄","material":"ポリエステル55%・レーヨン45%","order":"4 / B-BK","photo":"sw/l-B-BK.jpg","color":"#424b52"},{"code":"CR12","group":"4 小ダイヤ柄","material":"ポリエステル100%","order":"4 / CR12","photo":"sw/l-CR12.jpg","color":"#454e56"},{"code":"CR15","group":"4 小ダイヤ柄","material":"ポリエステル100%","order":"4 / CR15","photo":"sw/l-CR15.jpg","color":"#595d62"},{"code":"CR16","group":"4 小ダイヤ柄","material":"ポリエステル100%","order":"4 / CR16","photo":"sw/l-CR16.jpg","color":"#554f4f"},{"code":"CR17","group":"4 小ダイヤ柄","material":"ポリエステル100%","order":"4 / CR17","photo":"sw/l-CR17.jpg","color":"#634f58"},{"code":"E503","group":"4 草木柄","material":"ポリエステル55%・レーヨン45%","order":"4 / E503","photo":"sw/l-E503.jpg","color":"#5d6772"},{"code":"E923","group":"4 草木柄","material":"ポリエステル55%・レーヨン45%","order":"4 / E923","photo":"sw/l-E923.jpg","color":"#69625e"},{"code":"E931","group":"4 草木柄","material":"ポリエステル55%・レーヨン45%","order":"4 / E931","photo":"sw/l-E931.jpg","color":"#5a5d5f"}]};
+
+</script>
+<script>
+/* 自動生成: tools/eu_photos.py(見本帳の写真・ラベルから) */
+window.R = window.R || {};
+R.FABRIC_PHOTOS = {
+"european:CR6609": {
+"photo": "fab/eu-CR6609.jpg",
+"material": "3PLY Wool100%",
+"origin": "イタリア",
+"color": "#464644",
+"cm": 8,
+"src": "IMG_1335"
+},
+"european:CR6610": {
+"photo": "fab/eu-CR6610.jpg",
+"material": "3PLY Wool100%",
+"origin": "イタリア",
+"color": "#7b7b78",
+"cm": 8,
+"src": "IMG_1336"
+},
+"european:CR6611": {
+"photo": "fab/eu-CR6611.jpg",
+"material": "3PLY Wool100%",
+"origin": "イタリア",
+"color": "#535757",
+"cm": 8,
+"src": "IMG_1337"
+},
+"european:CR6612": {
+"photo": "fab/eu-CR6612.jpg",
+"material": "3PLY Wool100%",
+"origin": "イタリア",
+"color": "#4b5154",
+"cm": 8,
+"src": "IMG_1338"
+},
+"european:CR6613": {
+"photo": "fab/eu-CR6613.jpg",
+"material": "3PLY Wool100%",
+"origin": "イタリア",
+"color": "#81817d",
+"cm": 8,
+"src": "IMG_1339"
+},
+"european:CR6614": {
+"photo": "fab/eu-CR6614.jpg",
+"material": "Wool100%",
+"origin": "イタリア",
+"color": "#3e3e3c",
+"cm": 8,
+"src": "IMG_1340"
+},
+"european:CR6615": {
+"photo": "fab/eu-CR6615.jpg",
+"material": "Wool100%",
+"origin": "イタリア",
+"color": "#2f3846",
+"cm": 8,
+"src": "IMG_1341"
+},
+"european:CR6616": {
+"photo": "fab/eu-CR6616.jpg",
+"material": "Wool100%",
+"origin": "イタリア",
+"color": "#4e4f4d",
+"cm": 8,
+"src": "IMG_1342"
+},
+"european:CR6617": {
+"photo": "fab/eu-CR6617.jpg",
+"material": "3PLY Wool100%",
+"origin": "イタリア",
+"color": "#545656",
+"cm": 8,
+"src": "IMG_1343"
+},
+"european:CR6618": {
+"photo": "fab/eu-CR6618.jpg",
+"material": "Wool100%",
+"origin": "イタリア",
+"color": "#5c697e",
+"cm": 8,
+"src": "IMG_1344"
+},
+"european:CR6619": {
+"photo": "fab/eu-CR6619.jpg",
+"material": "Wool100%",
+"origin": "イタリア",
+"color": "#656561",
+"cm": 8,
+"src": "IMG_1345"
+},
+"european:CR6620": {
+"photo": "fab/eu-CR6620.jpg",
+"material": "Wool100%",
+"origin": "イタリア",
+"color": "#929491",
+"cm": 8,
+"src": "IMG_1346"
+},
+"european:SC6621": {
+"photo": "fab/eu-SC6621.jpg",
+"material": "Super100's Wool100% 260g/m",
+"origin": "イタリア",
+"color": "#434039",
+"cm": 8,
+"src": "IMG_1347"
+},
+"european:RD6622": {
+"photo": "fab/eu-RD6622.jpg",
+"material": "Wool100%",
+"origin": "イタリア",
+"color": "#555653",
+"cm": 8,
+"src": "IMG_1348"
+},
+"european:RD6623": {
+"photo": "fab/eu-RD6623.jpg",
+"material": "Wool100%",
+"origin": "イタリア",
+"color": "#535754",
+"cm": 8,
+"src": "IMG_1349"
+},
+"european:RD6624": {
+"photo": "fab/eu-RD6624.jpg",
+"material": "Wool100%",
+"origin": "イタリア",
+"color": "#888983",
+"cm": 8,
+"src": "IMG_1350"
+},
+"european:RD6625": {
+"photo": "fab/eu-RD6625.jpg",
+"material": "Wool100%",
+"origin": "イタリア",
+"color": "#5b5a58",
+"cm": 8,
+"src": "IMG_1351"
+},
+"european:RD6626": {
+"photo": "fab/eu-RD6626.jpg",
+"material": "Wool100%",
+"origin": "イタリア",
+"color": "#545452",
+"cm": 8,
+"src": "IMG_1352"
+},
+"european:RD5641": {
+"photo": "fab/eu-RD5641.jpg",
+"material": "Wool100%",
+"origin": "イタリア",
+"color": "#4b4b49",
+"cm": 8,
+"src": "IMG_1353"
+},
+"european:RD5644": {
+"photo": "fab/eu-RD5644.jpg",
+"material": "Wool100%",
+"origin": "イタリア",
+"color": "#5c5c5e",
+"cm": 8,
+"src": "IMG_1354"
+},
+"european:RD5654": {
+"photo": "fab/eu-RD5654.jpg",
+"material": "Wool100%",
+"origin": "イタリア",
+"color": "#484c4b",
+"cm": 8,
+"src": "IMG_1355"
+},
+"european:RD5655": {
+"photo": "fab/eu-RD5655.jpg",
+"material": "Wool100%",
+"origin": "イタリア",
+"color": "#686a68",
+"cm": 8,
+"src": "IMG_1356"
+},
+"european:RD5657": {
+"photo": "fab/eu-RD5657.jpg",
+"material": "Wool98% Elastane2%",
+"origin": "イタリア",
+"color": "#4a4b56",
+"cm": 8,
+"src": "IMG_1357"
+},
+"european:RD5660": {
+"photo": "fab/eu-RD5660.jpg",
+"material": "Wool100%",
+"origin": "イタリア",
+"color": "#343636",
+"cm": 8,
+"src": "IMG_1359"
+},
+"european:CN6560": {
+"photo": "fab/eu-CN6560.jpg",
+"material": "Super110's Wool100% 260-270g/m",
+"origin": "イタリア",
+"color": "#323230",
+"cm": 8,
+"src": "IMG_1360"
+},
+"european:CN6561": {
+"photo": "fab/eu-CN6561.jpg",
+"material": "Super110's Wool100% 260-270g/m",
+"origin": "イタリア",
+"color": "#404342",
+"cm": 8,
+"src": "IMG_1361"
+},
+"european:CN6562": {
+"photo": "fab/eu-CN6562.jpg",
+"material": "Super110's Wool100% 260-270g/m",
+"origin": "イタリア",
+"color": "#3f4146",
+"cm": 8,
+"src": "IMG_1362"
+},
+"european:CN6564": {
+"photo": "fab/eu-CN6564.jpg",
+"material": "Super110's Wool100% 260-270g/m",
+"origin": "イタリア",
+"color": "#6b716b",
+"cm": 8,
+"src": "IMG_1363"
+},
+"european:CN6565": {
+"photo": "fab/eu-CN6565.jpg",
+"material": "Super110's Wool100% 260-270g/m",
+"origin": "イタリア",
+"color": "#5e5b53",
+"cm": 8,
+"src": "IMG_1364"
+},
+"european:CN5598": {
+"photo": "fab/eu-CN5598.jpg",
+"material": "Super110's Wool100% 270g/m",
+"origin": "イタリア",
+"color": "#a9987e",
+"cm": 8,
+"src": "IMG_1365"
+},
+"european:CN6566": {
+"photo": "fab/eu-CN6566.jpg",
+"material": "Wool100%",
+"origin": "イタリア",
+"color": "#282f30",
+"cm": 8,
+"src": "IMG_1366"
+},
+"european:CN6567": {
+"photo": "fab/eu-CN6567.jpg",
+"material": "Wool100%",
+"origin": "イタリア",
+"color": "#4d4e4c",
+"cm": 8,
+"src": "IMG_1367"
+},
+"european:CN6568": {
+"photo": "fab/eu-CN6568.jpg",
+"material": "Wool100%",
+"origin": "イタリア",
+"color": "#21211f",
+"cm": 8,
+"src": "IMG_1368"
+},
+"european:CN6569": {
+"photo": "fab/eu-CN6569.jpg",
+"material": "Wool100%",
+"origin": "イタリア",
+"color": "#333333",
+"cm": 8,
+"src": "IMG_1369"
+},
+"european:CN6570": {
+"photo": "fab/eu-CN6570.jpg",
+"material": "Wool100%",
+"origin": "イタリア",
+"color": "#272930",
+"cm": 8,
+"src": "IMG_1370"
+},
+"european:CN6571": {
+"photo": "fab/eu-CN6571.jpg",
+"material": "Wool100%",
+"origin": "イタリア",
+"color": "#3f3b38",
+"cm": 8,
+"src": "IMG_1371"
+},
+"european:CN6572": {
+"photo": "fab/eu-CN6572.jpg",
+"material": "Wool100%",
+"origin": "イタリア",
+"color": "#3e3e3c",
+"cm": 8,
+"src": "IMG_1372"
+},
+"european:CN6574": {
+"photo": "fab/eu-CN6574.jpg",
+"material": "Super110's Wool100% 350g/m",
+"origin": "イタリア",
+"color": "#5c5c5c",
+"cm": 8,
+"src": "IMG_1373"
+},
+"european:CN6575": {
+"photo": "fab/eu-CN6575.jpg",
+"material": "Super100's Wool100% 340g/m",
+"origin": "イタリア",
+"color": "#b5b2a5",
+"cm": 8,
+"src": "IMG_1374"
+},
+"european:CN6576": {
+"photo": "fab/eu-CN6576.jpg",
+"material": "Super100's Wool100% 340g/m",
+"origin": "イタリア",
+"color": "#cfcbc0",
+"cm": 8,
+"src": "IMG_1375"
+},
+"european:CN5572": {
+"photo": "fab/eu-CN5572.jpg",
+"material": "Super110's Wool100% 260g/m",
+"origin": "イタリア",
+"color": "#7b7b76",
+"cm": 8,
+"src": "IMG_1376"
+},
+"european:CN5573": {
+"photo": "fab/eu-CN5573.jpg",
+"material": "Wool100%",
+"origin": "イタリア",
+"color": "#585b59",
+"cm": 8,
+"src": "IMG_1377"
+},
+"european:CN5574": {
+"photo": "fab/eu-CN5574.jpg",
+"material": "Wool100% 320g/m",
+"origin": "イタリア",
+"color": "#5c6767",
+"cm": 8,
+"src": "IMG_1378"
+},
+"european:CN5575": {
+"photo": "fab/eu-CN5575.jpg",
+"material": "Wool100% 320g/m",
+"origin": "イタリア",
+"color": "#696965",
+"cm": 8,
+"src": "IMG_1379"
+},
+"european:CN5577": {
+"photo": "fab/eu-CN5577.jpg",
+"material": "Wool100% 360g/m",
+"origin": "イタリア",
+"color": "#2b2b29",
+"cm": 8,
+"src": "IMG_1380"
+},
+"european:CN5578": {
+"photo": "fab/eu-CN5578.jpg",
+"material": "Wool100% 360g/m",
+"origin": "イタリア",
+"color": "#737472",
+"cm": 8,
+"src": "IMG_1381"
+},
+"european:CN5579": {
+"photo": "fab/eu-CN5579.jpg",
+"material": "Wool100% 360g/m",
+"origin": "イタリア",
+"color": "#30302c",
+"cm": 8,
+"src": "IMG_1382"
+},
+"european:CN5580": {
+"photo": "fab/eu-CN5580.jpg",
+"material": "Wool100% 360g/m",
+"origin": "イタリア",
+"color": "#2b2d2d",
+"cm": 8,
+"src": "IMG_1383"
+},
+"european:CN5582": {
+"photo": "fab/eu-CN5582.jpg",
+"material": "Wool100% 360g/m",
+"origin": "イタリア",
+"color": "#363936",
+"cm": 8,
+"src": "IMG_1384"
+},
+"european:CN5583": {
+"photo": "fab/eu-CN5583.jpg",
+"material": "Wool100% 260g/m",
+"origin": "イタリア",
+"color": "#898a87",
+"cm": 8,
+"src": "IMG_1385"
+},
+"european:CN5584": {
+"photo": "fab/eu-CN5584.jpg",
+"material": "Wool100% 260g/m",
+"origin": "イタリア",
+"color": "#bebfb9",
+"cm": 8,
+"src": "IMG_1386"
+},
+"european:CN5585": {
+"photo": "fab/eu-CN5585.jpg",
+"material": "Wool100% 260g/m",
+"origin": "イタリア",
+"color": "#31322e",
+"cm": 8,
+"src": "IMG_1387"
+},
+"european:CN5587": {
+"photo": "fab/eu-CN5587.jpg",
+"material": "Wool100% 260g/m",
+"origin": "イタリア",
+"color": "#50504f",
+"cm": 8,
+"src": "IMG_1388"
+},
+"european:TG6520": {
+"photo": "fab/eu-TG6520.jpg",
+"material": "Wool100% 260g/m",
+"origin": "イタリア",
+"color": "#262624",
+"cm": 8,
+"src": "IMG_1389"
+},
+"european:TG6521": {
+"photo": "fab/eu-TG6521.jpg",
+"material": "Wool100%",
+"origin": "イタリア",
+"color": "#4b4c57",
+"cm": 8,
+"src": "IMG_1390"
+},
+"european:TG6522": {
+"photo": "fab/eu-TG6522.jpg",
+"material": "Wool100%",
+"origin": "イタリア",
+"color": "#545454",
+"cm": 8,
+"src": "IMG_1391"
+},
+"european:TG6523": {
+"photo": "fab/eu-TG6523.jpg",
+"material": "Wool100%",
+"origin": "イタリア",
+"color": "#4c4b4a",
+"cm": 8,
+"src": "IMG_1392"
+},
+"european:TG6524": {
+"photo": "fab/eu-TG6524.jpg",
+"material": "Wool100%",
+"origin": "イタリア",
+"color": "#867f72",
+"cm": 8,
+"src": "IMG_1393"
+},
+"european:TG6525": {
+"photo": "fab/eu-TG6525.jpg",
+"material": "Wool100%",
+"origin": "イタリア",
+"color": "#2c3232",
+"cm": 8,
+"src": "IMG_1394"
+},
+"european:TG6526": {
+"photo": "fab/eu-TG6526.jpg",
+"material": "Wool100%",
+"origin": "イタリア",
+"color": "#3f3f3e",
+"cm": 8,
+"src": "IMG_1395"
+},
+"european:TG6527": {
+"photo": "fab/eu-TG6527.jpg",
+"material": "Wool100%",
+"origin": "イタリア",
+"color": "#63615a",
+"cm": 8,
+"src": "IMG_1396"
+},
+"european:TG6528": {
+"photo": "fab/eu-TG6528.jpg",
+"material": "Wool100% 260g/m",
+"origin": "イタリア",
+"color": "#525250",
+"cm": 8,
+"src": "IMG_1397"
+},
+"european:TG6529": {
+"photo": "fab/eu-TG6529.jpg",
+"material": "Wool100%",
+"origin": "イタリア",
+"color": "#343432",
+"cm": 8,
+"src": "IMG_1398"
+},
+"european:TG6530": {
+"photo": "fab/eu-TG6530.jpg",
+"material": "Wool100%",
+"origin": "イタリア",
+"color": "#5a5f5e",
+"cm": 8,
+"src": "IMG_1399"
+},
+"european:TG6531": {
+"photo": "fab/eu-TG6531.jpg",
+"material": "Wool100%",
+"origin": "イタリア",
+"color": "#5c5b51",
+"cm": 8,
+"src": "IMG_1400"
+},
+"european:TG6532": {
+"photo": "fab/eu-TG6532.jpg",
+"material": "Wool100%",
+"origin": "イタリア",
+"color": "#3f4149",
+"cm": 8,
+"src": "IMG_1401"
+},
+"european:TG6533": {
+"photo": "fab/eu-TG6533.jpg",
+"material": "Wool100%",
+"origin": "イタリア",
+"color": "#635f5a",
+"cm": 8,
+"src": "IMG_1402"
+},
+"european:TG6534": {
+"photo": "fab/eu-TG6534.jpg",
+"material": "Wool100% 260g/m",
+"origin": "イタリア",
+"color": "#5b5c5c",
+"cm": 8,
+"src": "IMG_1403"
+},
+"european:TG6535": {
+"photo": "fab/eu-TG6535.jpg",
+"material": "Wool100%",
+"origin": "イタリア",
+"color": "#555757",
+"cm": 8,
+"src": "IMG_1404"
+},
+"european:AF6536": {
+"photo": "fab/eu-AF6536.jpg",
+"material": "Wool100%",
+"origin": "イギリス",
+"color": "#54585a",
+"cm": 8,
+"src": "IMG_1405"
+},
+"european:AF6537": {
+"photo": "fab/eu-AF6537.jpg",
+"material": "Wool100%",
+"origin": "イギリス",
+"color": "#30312b",
+"cm": 8,
+"src": "IMG_1406"
+}
+};
+
+</script>
+<script>
+/* 自動生成: tools/lining_photos.py(見本帳の写真・ラベルから) */
+window.R = window.R || {};
+R.LINING_PHOTOS = [
+{
+"code": "H117 B3",
+"series": "H117",
+"group": "pl-05",
+"material": "ポリエステル100%",
+"width": 140,
+"photo": "fab/ln-H117-B3.jpg",
+"color": "#a59980",
+"src": "IMG_1260"
+},
+{
+"code": "H117 B12",
+"series": "H117",
+"group": "pl-05",
+"material": "ポリエステル100%",
+"width": 140,
+"photo": "fab/ln-H117-B12.jpg",
+"color": "#7b7672",
+"src": "IMG_1261"
+},
+{
+"code": "H117 B16",
+"series": "H117",
+"group": "pl-05",
+"material": "ポリエステル100%",
+"width": 140,
+"photo": "fab/ln-H117-B16.jpg",
+"color": "#9c9a8e",
+"src": "IMG_1262"
+},
+{
+"code": "H117 B17",
+"series": "H117",
+"group": "pl-05",
+"material": "ポリエステル100%",
+"width": 140,
+"photo": "fab/ln-H117-B17.jpg",
+"color": "#99928a",
+"src": "IMG_1263"
+},
+{
+"code": "H117 B19",
+"series": "H117",
+"group": "pl-05",
+"material": "ポリエステル100%",
+"width": 140,
+"photo": "fab/ln-H117-B19.jpg",
+"color": "#b7b2a6",
+"src": "IMG_1264"
+},
+{
+"code": "H117 B6",
+"series": "H117",
+"group": "pl-05",
+"material": "ポリエステル100%",
+"width": 140,
+"photo": "fab/ln-H117-B6.jpg",
+"color": "#b4bdbe",
+"src": "IMG_1265"
+},
+{
+"code": "H117 B7",
+"series": "H117",
+"group": "pl-05",
+"material": "ポリエステル100%",
+"width": 140,
+"photo": "fab/ln-H117-B7.jpg",
+"color": "#a9aba3",
+"src": "IMG_1266"
+},
+{
+"code": "H117 B8",
+"series": "H117",
+"group": "pl-05",
+"material": "ポリエステル100%",
+"width": 140,
+"photo": "fab/ln-H117-B8.jpg",
+"color": "#a5a19d",
+"src": "IMG_1267"
+},
+{
+"code": "H117 B9",
+"series": "H117",
+"group": "pl-05",
+"material": "ポリエステル100%",
+"width": 140,
+"photo": "fab/ln-H117-B9.jpg",
+"color": "#a4988d",
+"src": "IMG_1268"
+},
+{
+"code": "H117 B11",
+"series": "H117",
+"group": "pl-05",
+"material": "ポリエステル100%",
+"width": 140,
+"photo": "fab/ln-H117-B11.jpg",
+"color": "#bab9b4",
+"src": "IMG_1269"
+},
+{
+"code": "H117 B22",
+"series": "H117",
+"group": "pl-05",
+"material": "ポリエステル100%",
+"width": 140,
+"photo": "fab/ln-H117-B22.jpg",
+"color": "#a99480",
+"src": "IMG_1270"
+},
+{
+"code": "H117 B23",
+"series": "H117",
+"group": "pl-05",
+"material": "ポリエステル100%",
+"width": 140,
+"photo": "fab/ln-H117-B23.jpg",
+"color": "#76756e",
+"src": "IMG_1271"
+},
+{
+"code": "H117 B24",
+"series": "H117",
+"group": "pl-05",
+"material": "ポリエステル100%",
+"width": 140,
+"photo": "fab/ln-H117-B24.jpg",
+"color": "#777574",
+"src": "IMG_1272"
+},
+{
+"code": "H117 B25",
+"series": "H117",
+"group": "pl-05",
+"material": "ポリエステル100%",
+"width": 140,
+"photo": "fab/ln-H117-B25.jpg",
+"color": "#b2b1ac",
+"src": "IMG_1273"
+},
+{
+"code": "H117 B26",
+"series": "H117",
+"group": "pl-05",
+"material": "ポリエステル100%",
+"width": 140,
+"photo": "fab/ln-H117-B26.jpg",
+"color": "#857d73",
+"src": "IMG_1274"
+},
+{
+"code": "H117 B27",
+"series": "H117",
+"group": "pl-05",
+"material": "ポリエステル100%",
+"width": 140,
+"photo": "fab/ln-H117-B27.jpg",
+"color": "#877e7d",
+"src": "IMG_1275"
+},
+{
+"code": "H117 B20",
+"series": "H117",
+"group": "pl-05",
+"material": "ポリエステル100%",
+"width": 140,
+"photo": "fab/ln-H117-B20.jpg",
+"color": "#a78b7f",
+"src": "IMG_1276"
+},
+{
+"code": "H117 B21",
+"series": "H117",
+"group": "pl-05",
+"material": "ポリエステル100%",
+"width": 140,
+"photo": "fab/ln-H117-B21.jpg",
+"color": "#aaaaa5",
+"src": "IMG_1277"
+},
+{
+"code": "H117 B1",
+"series": "H117",
+"group": "pl-05",
+"material": "ポリエステル100%",
+"width": 140,
+"photo": "fab/ln-H117-B1.jpg",
+"color": "#c3b49b",
+"src": "IMG_1278"
+},
+{
+"code": "H117 B2",
+"series": "H117",
+"group": "pl-05",
+"material": "ポリエステル100%",
+"width": 140,
+"photo": "fab/ln-H117-B2.jpg",
+"color": "#b3aca5",
+"src": "IMG_1279"
+},
+{
+"code": "H117 B28",
+"series": "H117",
+"group": "pl-05",
+"material": "ポリエステル100%",
+"width": 140,
+"photo": "fab/ln-H117-B28.jpg",
+"color": "#7b8783",
+"src": "IMG_1280"
+},
+{
+"code": "H117 B29",
+"series": "H117",
+"group": "pl-05",
+"material": "ポリエステル100%",
+"width": 140,
+"photo": "fab/ln-H117-B29.jpg",
+"color": "#99817f",
+"src": "IMG_1281"
+},
+{
+"code": "H117 B32",
+"series": "H117",
+"group": "pl-05",
+"material": "ポリエステル100%",
+"width": 140,
+"photo": "fab/ln-H117-B32.jpg",
+"color": "#8a8c8c",
+"src": "IMG_1282"
+},
+{
+"code": "H117 B33",
+"series": "H117",
+"group": "pl-05",
+"material": "ポリエステル100%",
+"width": 140,
+"photo": "fab/ln-H117-B33.jpg",
+"color": "#9f8370",
+"src": "IMG_1283"
+},
+{
+"code": "H117 B34",
+"series": "H117",
+"group": "pl-05",
+"material": "ポリエステル100%",
+"width": 140,
+"photo": "fab/ln-H117-B34.jpg",
+"color": "#969c93",
+"src": "IMG_1284"
+},
+{
+"code": "H117 B35",
+"series": "H117",
+"group": "pl-05",
+"material": "ポリエステル100%",
+"width": 140,
+"photo": "fab/ln-H117-B35.jpg",
+"color": "#8f8274",
+"src": "IMG_1285"
+},
+{
+"code": "H117 B37",
+"series": "H117",
+"group": "pl-05",
+"material": "ポリエステル100%",
+"width": 140,
+"photo": "fab/ln-H117-B37.jpg",
+"color": "#888672",
+"src": "IMG_1286"
+},
+{
+"code": "H117 B38",
+"series": "H117",
+"group": "pl-05",
+"material": "ポリエステル100%",
+"width": 140,
+"photo": "fab/ln-H117-B38.jpg",
+"color": "#8c7470",
+"src": "IMG_1287"
+},
+{
+"code": "H117 B39",
+"series": "H117",
+"group": "pl-05",
+"material": "ポリエステル100%",
+"width": 140,
+"photo": "fab/ln-H117-B39.jpg",
+"color": "#95867a",
+"src": "IMG_1288"
+},
+{
+"code": "H117 B40",
+"series": "H117",
+"group": "pl-05",
+"material": "ポリエステル100%",
+"width": 140,
+"photo": "fab/ln-H117-B40.jpg",
+"color": "#9b8775",
+"src": "IMG_1289"
+},
+{
+"code": "H117 B41",
+"series": "H117",
+"group": "pl-05",
+"material": "ポリエステル100%",
+"width": 140,
+"photo": "fab/ln-H117-B41.jpg",
+"color": "#bfb4b1",
+"src": "IMG_1290"
+},
+{
+"code": "H117 B42",
+"series": "H117",
+"group": "pl-05",
+"material": "ポリエステル100%",
+"width": 140,
+"photo": "fab/ln-H117-B42.jpg",
+"color": "#989d8c",
+"src": "IMG_1291"
+},
+{
+"code": "H117 B43",
+"series": "H117",
+"group": "pl-05",
+"material": "ポリエステル100%",
+"width": 140,
+"photo": "fab/ln-H117-B43.jpg",
+"color": "#8e897f",
+"src": "IMG_1292"
+},
+{
+"code": "H117 B44",
+"series": "H117",
+"group": "pl-05",
+"material": "ポリエステル100%",
+"width": 140,
+"photo": "fab/ln-H117-B44.jpg",
+"color": "#ac8c73",
+"src": "IMG_1293"
+},
+{
+"code": "E525 C1",
+"series": "E525",
+"group": "pl-06",
+"material": "ポリエステル57% レーヨン43%",
+"width": 140,
+"photo": "fab/ln-E525-C1.jpg",
+"color": "#878a87",
+"src": "IMG_1294"
+},
+{
+"code": "E525 C2",
+"series": "E525",
+"group": "pl-06",
+"material": "ポリエステル57% レーヨン43%",
+"width": 140,
+"photo": "fab/ln-E525-C2.jpg",
+"color": "#a27d80",
+"src": "IMG_1295"
+},
+{
+"code": "E525 C3",
+"series": "E525",
+"group": "pl-06",
+"material": "ポリエステル57% レーヨン43%",
+"width": 140,
+"photo": "fab/ln-E525-C3.jpg",
+"color": "#686861",
+"src": "IMG_1296"
+},
+{
+"code": "E525 C4",
+"series": "E525",
+"group": "pl-06",
+"material": "ポリエステル57% レーヨン43%",
+"width": 140,
+"photo": "fab/ln-E525-C4.jpg",
+"color": "#72767f",
+"src": "IMG_1297"
+},
+{
+"code": "E525 C5",
+"series": "E525",
+"group": "pl-06",
+"material": "ポリエステル57% レーヨン43%",
+"width": 140,
+"photo": "fab/ln-E525-C5.jpg",
+"color": "#925153",
+"src": "IMG_1298"
+},
+{
+"code": "E525 C6",
+"series": "E525",
+"group": "pl-06",
+"material": "ポリエステル57% レーヨン43%",
+"width": 140,
+"photo": "fab/ln-E525-C6.jpg",
+"color": "#5f605e",
+"src": "IMG_1299"
+},
+{
+"code": "E525 C7",
+"series": "E525",
+"group": "pl-06",
+"material": "ポリエステル57% レーヨン43%",
+"width": 140,
+"photo": "fab/ln-E525-C7.jpg",
+"color": "#afafa7",
+"src": "IMG_1300"
+},
+{
+"code": "E525 C8",
+"series": "E525",
+"group": "pl-06",
+"material": "ポリエステル57% レーヨン43%",
+"width": 140,
+"photo": "fab/ln-E525-C8.jpg",
+"color": "#989082",
+"src": "IMG_1301"
+},
+{
+"code": "E525 C9",
+"series": "E525",
+"group": "pl-06",
+"material": "ポリエステル57% レーヨン43%",
+"width": 140,
+"photo": "fab/ln-E525-C9.jpg",
+"color": "#7b6258",
+"src": "IMG_1302"
+},
+{
+"code": "E525 C10",
+"series": "E525",
+"group": "pl-06",
+"material": "ポリエステル57% レーヨン43%",
+"width": 140,
+"photo": "fab/ln-E525-C10.jpg",
+"color": "#afa793",
+"src": "IMG_1303"
+},
+{
+"code": "C102 A1",
+"series": "C102",
+"group": "pl-07",
+"material": "ポリエステル57% レーヨン43%",
+"width": 140,
+"photo": "fab/ln-C102-A1.jpg",
+"color": "#858481",
+"src": "IMG_1304"
+},
+{
+"code": "C102 A2",
+"series": "C102",
+"group": "pl-07",
+"material": "ポリエステル57% レーヨン43%",
+"width": 140,
+"photo": "fab/ln-C102-A2.jpg",
+"color": "#6a6d7b",
+"src": "IMG_1305"
+},
+{
+"code": "C102 A3",
+"series": "C102",
+"group": "pl-07",
+"material": "ポリエステル57% レーヨン43%",
+"width": 140,
+"photo": "fab/ln-C102-A3.jpg",
+"color": "#8a5f61",
+"src": "IMG_1306"
+},
+{
+"code": "C102 A4",
+"series": "C102",
+"group": "pl-07",
+"material": "ポリエステル57% レーヨン43%",
+"width": 140,
+"photo": "fab/ln-C102-A4.jpg",
+"color": "#5f615e",
+"src": "IMG_1307"
+},
+{
+"code": "C102 A5",
+"series": "C102",
+"group": "pl-07",
+"material": "ポリエステル57% レーヨン43%",
+"width": 140,
+"photo": "fab/ln-C102-A5.jpg",
+"color": "#c2b9aa",
+"src": "IMG_1308"
+},
+{
+"code": "C102 A9",
+"series": "C102",
+"group": "pl-07",
+"material": "ポリエステル57% レーヨン43%",
+"width": 140,
+"photo": "fab/ln-C102-A9.jpg",
+"color": "#7d726c",
+"src": "IMG_1309"
+},
+{
+"code": "C102 A10",
+"series": "C102",
+"group": "pl-07",
+"material": "ポリエステル57% レーヨン43%",
+"width": 140,
+"photo": "fab/ln-C102-A10.jpg",
+"color": "#534e53",
+"src": "IMG_1310"
+},
+{
+"code": "C103 A2",
+"series": "C103",
+"group": "pl-raxa",
+"material": "ポリエステル57% レーヨン43%",
+"width": 140,
+"photo": "fab/ln-C103-A2.jpg",
+"color": "#a96a6b",
+"src": "IMG_1311"
+},
+{
+"code": "C103 A8",
+"series": "C103",
+"group": "pl-raxa",
+"material": "ポリエステル57% レーヨン43%",
+"width": 140,
+"photo": "fab/ln-C103-A8.jpg",
+"color": "#7d63a6",
+"src": "IMG_1312"
+},
+{
+"code": "C103 A10",
+"series": "C103",
+"group": "pl-raxa",
+"material": "ポリエステル57% レーヨン43%",
+"width": 140,
+"photo": "fab/ln-C103-A10.jpg",
+"color": "#444548",
+"src": "IMG_1313"
+},
+{
+"code": "C107 A1",
+"series": "C107",
+"group": "pl-06",
+"material": "ポリエステル57% レーヨン43%",
+"width": 140,
+"photo": "fab/ln-C107-A1.jpg",
+"color": "#55554f",
+"src": "IMG_1314"
+},
+{
+"code": "C107 A2",
+"series": "C107",
+"group": "pl-06",
+"material": "ポリエステル57% レーヨン43%",
+"width": 140,
+"photo": "fab/ln-C107-A2.jpg",
+"color": "#8b8278",
+"src": "IMG_1315"
+},
+{
+"code": "C107 A5",
+"series": "C107",
+"group": "pl-06",
+"material": "ポリエステル57% レーヨン43%",
+"width": 140,
+"photo": "fab/ln-C107-A5.jpg",
+"color": "#888a86",
+"src": "IMG_1316"
+},
+{
+"code": "C107 A6",
+"series": "C107",
+"group": "pl-06",
+"material": "ポリエステル57% レーヨン43%",
+"width": 140,
+"photo": "fab/ln-C107-A6.jpg",
+"color": "#7f6491",
+"src": "IMG_1318"
+},
+{
+"code": "C107 A8",
+"series": "C107",
+"group": "pl-06",
+"material": "ポリエステル57% レーヨン43%",
+"width": 140,
+"photo": "fab/ln-C107-A8.jpg",
+"color": "#9a7875",
+"src": "IMG_1319"
+},
+{
+"code": "C107 A3",
+"series": "C107",
+"group": "pl-06",
+"material": "ポリエステル57% レーヨン43%",
+"width": 140,
+"photo": "fab/ln-C107-A3.jpg",
+"color": "#9b5251",
+"src": "IMG_1320"
+},
+{
+"code": "C107 A7",
+"series": "C107",
+"group": "pl-06",
+"material": "ポリエステル57% レーヨン43%",
+"width": 140,
+"photo": "fab/ln-C107-A7.jpg",
+"color": "#a8a092",
+"src": "IMG_1321"
+},
+{
+"code": "C107 A9",
+"series": "C107",
+"group": "pl-06",
+"material": "ポリエステル57% レーヨン43%",
+"width": 140,
+"photo": "fab/ln-C107-A9.jpg",
+"color": "#8ea4b1",
+"src": "IMG_1322"
+},
+{
+"code": "C107 A10",
+"series": "C107",
+"group": "pl-06",
+"material": "ポリエステル57% レーヨン43%",
+"width": 140,
+"photo": "fab/ln-C107-A10.jpg",
+"color": "#757f94",
+"src": "IMG_1323"
+},
+{
+"code": "C108 A1",
+"series": "C108",
+"group": "pl-07",
+"material": "ポリエステル57% レーヨン43%",
+"width": 140,
+"photo": "fab/ln-C108-A1.jpg",
+"color": "#9e9d9b",
+"src": "IMG_1324"
+},
+{
+"code": "C108 A2",
+"series": "C108",
+"group": "pl-07",
+"material": "ポリエステル57% レーヨン43%",
+"width": 140,
+"photo": "fab/ln-C108-A2.jpg",
+"color": "#bcaa8e",
+"src": "IMG_1325"
+},
+{
+"code": "C108 A5",
+"series": "C108",
+"group": "pl-07",
+"material": "ポリエステル57% レーヨン43%",
+"width": 140,
+"photo": "fab/ln-C108-A5.jpg",
+"color": "#4d65c8",
+"src": "IMG_1326"
+},
+{
+"code": "C108 A6",
+"series": "C108",
+"group": "pl-07",
+"material": "ポリエステル57% レーヨン43%",
+"width": 140,
+"photo": "fab/ln-C108-A6.jpg",
+"color": "#64646a",
+"src": "IMG_1327"
+},
+{
+"code": "C108 A7",
+"series": "C108",
+"group": "pl-07",
+"material": "ポリエステル57% レーヨン43%",
+"width": 140,
+"photo": "fab/ln-C108-A7.jpg",
+"color": "#62625f",
+"src": "IMG_1328"
+},
+{
+"code": "E603 A1",
+"series": "E603",
+"group": "pl-raxa",
+"material": "ポリエステル57% レーヨン43%",
+"width": 140,
+"photo": "fab/ln-E603-A1.jpg",
+"color": "#9e827f",
+"src": "IMG_1329"
+},
+{
+"code": "E603 A3",
+"series": "E603",
+"group": "pl-raxa",
+"material": "ポリエステル57% レーヨン43%",
+"width": 140,
+"photo": "fab/ln-E603-A3.jpg",
+"color": "#71747e",
+"src": "IMG_1330"
+},
+{
+"code": "E603 A5",
+"series": "E603",
+"group": "pl-raxa",
+"material": "ポリエステル57% レーヨン43%",
+"width": 140,
+"photo": "fab/ln-E603-A5.jpg",
+"color": "#83827e",
+"src": "IMG_1331"
+},
+{
+"code": "E603 A6",
+"series": "E603",
+"group": "pl-raxa",
+"material": "ポリエステル57% レーヨン43%",
+"width": 140,
+"photo": "fab/ln-E603-A6.jpg",
+"color": "#969690",
+"src": "IMG_1332"
+},
+{
+"code": "E603 A8",
+"series": "E603",
+"group": "pl-raxa",
+"material": "ポリエステル57% レーヨン43%",
+"width": 140,
+"photo": "fab/ln-E603-A8.jpg",
+"color": "#958f81",
+"src": "IMG_1333"
+},
+{
+"code": "E603 A10",
+"series": "E603",
+"group": "pl-raxa",
+"material": "ポリエステル57% レーヨン43%",
+"width": 140,
+"photo": "fab/ln-E603-A10.jpg",
+"color": "#696965",
+"src": "IMG_1334"
+}
+];
 
 </script>
 <script>
@@ -398,7 +1723,7 @@ window.R = window.R || {};
       P('cover', 'カバーオール(SEモデル限定)', 'E2', { back: 'none', front: 'none', noSleeve: true, note: 'SEモデル限定。表はアウトポケットのみ。前ダーツ・パッドなし' }),
     ] },
     { key: 'lining', sec: '裏', label: '裏地', type: 'fabric', role: 'lining', focus: { inside: true } },
-    { key: 'paidLining', sec: '裏', label: '有料裏地', type: 'paidLining', options: [O('none', 'なし')].concat((R.BRAND_DATA && R.BRAND_DATA.paidLinings || []).map(g => Object.assign(O(g.id, g.label), { maker: g.maker, prices: g.prices }))), focus: { inside: true } },
+    { key: 'paidLining', sec: '裏', label: '有料裏地', type: 'paidLining', options: [O('none', 'なし')].concat((R.BRAND_DATA && R.BRAND_DATA.paidLinings || []).filter(g => g.maker !== 'ビエレッシ' /* 取り扱いなし */).map(g => Object.assign(O(g.id, g.label), { maker: g.maker, prices: g.prices }))).concat((R.LINING_PHOTOS || []).some(x => x.group === 'pl-raxa') ? [Object.assign(O('pl-raxa', '泉州RAXA ' + [...new Set(R.LINING_PHOTOS.filter(x => x.group === 'pl-raxa').map(x => x.series))].join(' / ') + '(料金表に記載なし)'), { maker: '泉州RAXA', prices: {} })] : []), focus: { inside: true } },
     { key: 'button', sec: 'ボタン', label: 'ボタン', options: buttons, swatch: true, focus: { view: 'front' }, note: '見本帳の写真から選べます。天然素材は一個ずつ色・柄・形状が微妙に異なります。' },
   ];
 
@@ -599,6 +1924,8 @@ window.R = window.R || {};
     const legacy = {};
     const src = raw && raw.config ? raw.config : raw;
     if (!src || typeof src !== 'object') return { state: d, legacy };
+    // 有料裏地 ビエレッシ(pl-04)は取り扱いをやめた
+    if (src.jacket && src.jacket.paidLining === 'pl-04') { src.jacket.paidLining = 'none'; src.jacket.paidLiningNo = ''; }
     // 旧フロントデザイン(前釦+ラペル一体) → 前釦コード + ラペルコード(PDF p.47 / p.49)
     if (src.jacket && src.jacket.front && !/^\d\d$/.test(src.jacket.front)) {
       const FM = { s2n: ['01', 1], s2p: ['01', 3], s3rn: ['03', 1], s3rp: ['03', 3], s1n: ['02', 1], s1p: ['02', 3], s3n: ['04', 1], d6: ['06', 3], d4: ['05', 3], s2k: ['10', 1], s1k: ['11', 1], s4: ['16', 1], s3h: ['17', 1], d41: ['07', 3], d21: ['08', 3], d63: ['09', 3], d61: ['15', 3] };
@@ -752,6 +2079,9 @@ window.R = window.R || {};
         id: 'b-' + b.id + '-' + code, kind: 'outer', name: code, code, brand: b.name, brandId: b.id, collection, material, origin, status, note, alias,
         pattern: 'solid', color: color || NEUTRAL, accent: '#888888', scale: 1, colorGuess: !!color, brandFabric: true, priceRef: pg, priceHow: how || '',
       };
+      // 見本帳の写真(R.FABRIC_PHOTOS)があれば、一覧の写真と3Dの生地に使い、ラベルの素材を表示する
+      const ph = R.FABRIC_PHOTOS && R.FABRIC_PHOTOS[b.id + ':' + code];
+      if (ph) Object.assign(f, { pattern: 'photo', photo: ph.photo, photoCm: ph.cm || 9, photoMirror: true, color: ph.color || f.color, colorGuess: true, material: ph.material || f.material, origin: ph.origin || f.origin });
       byId.set(f.id, f); list.push(f);
     }
     byBrand.set(b.id, list);
@@ -759,22 +2089,25 @@ window.R = window.R || {};
   /* 細井のオリジナル裏地(無料)。有料裏地の品番範囲に入るものは「有料裏地」の項目で選ぶ */
   const LL = D.liningList;
   if (LL) {
-    const b = { id: 'lc', kind: 'lining', name: 'オリジナル裏地(無料)', season: '', stockDate: LL.date, stockUrl: LL.url, groups: [], fabrics: [] };
-    brandById.set(b.id, b);
+    // 裏地の一覧には出さない(削除のご依頼)。以前保存した組み合わせが開けるよう、生地IDだけは残す
     const list = LL.free.map(([code, status, note, width]) => {
       const f = { id: 'b-lc-' + code, kind: 'lining', name: code, code, brand: 'オリジナル裏地', brandId: 'lc', collection: '', material: width ? `巾 ${width}cm` : '', origin: '', status, note,
         pattern: 'solid', color: '#3a4258', accent: '#888888', scale: 1, colorGuess: false, brandFabric: true, free: true, priceRef: -1 };
       byId.set(f.id, f); return f;
     });
-    byBrand.set(b.id, list);
   }
   /* 裏地見本帳(写真)。写真をそのまま3Dの裏地に使う */
   if (R.SWATCHES && R.SWATCHES.linings) {
-    const b = { id: 'cat', kind: 'lining', name: '裏地見本帳(無料)', season: '', stockDate: '', stockUrl: '', groups: [], fabrics: [] };
+    const b = { id: 'cat', kind: 'lining', name: '裏地見本帳', season: '', stockDate: '', stockUrl: '', groups: [], fabrics: [] };
     brandById.set(b.id, b);
     byBrand.set(b.id, R.SWATCHES.linings.map(x => { const f = { id: 'b-cat-' + x.code, kind: 'lining', name: x.order, code: x.order, brand: '裏地見本帳', brandId: 'cat', collection: x.group, material: x.material, origin: '', status: '', note: 'Cメイク以上選択',
       pattern: 'photo', photo: x.photo, photoCm: 7, color: x.color, accent: '#888888', scale: 1, colorGuess: true, brandFabric: true, free: true, priceRef: -1 }; byId.set(f.id, f); return f; }));
   }
+  /* 有料の柄裏地(泉州RAXA)の見本写真。裏地の一覧には出さず、「有料裏地」の品番から選ぶ */
+  const LP = R.LINING_PHOTOS || [];
+  const lpId = code => 'b-raxa-' + code.replace(/\s+/g, '-');
+  for (const x of LP) byId.set(lpId(x.code), { id: lpId(x.code), kind: 'lining', name: x.code, code: x.code, brand: '泉州RAXA', brandId: 'raxa', collection: x.series, material: x.material + (x.width ? ` / 巾 ${x.width}cm` : ''), origin: '', status: '', note: '有料裏地',
+    pattern: 'photo', photo: x.photo, photoCm: x.series === 'H117' ? 16 : 9, photoMirror: x.series !== 'H117', /* 柄プリントは折り返すと左右対称の別柄に見えるので折り返さない */ color: x.color, accent: '#888888', scale: 1, colorGuess: true, brandFabric: true, paid: true, priceRef: -1 });
   const group = f => {
     if (!f || f.priceRef == null || f.priceRef === -1) return null;
     if (typeof f.priceRef === 'string') { const [bid, gi] = f.priceRef.split(':'); const b = brandById.get(bid); return b ? Object.assign({ brand: b.name }, b.groups[+gi]) : null; }
@@ -802,7 +2135,10 @@ window.R = window.R || {};
     brand: id => brandById.get(id),
     brandsOf: kind => [...brandById.values()].filter(b => (b.kind || 'outer') === kind),
     paidButtons: D.paidButtons || [], freeButtons: D.freeButtons || '', paidLinings: D.paidLinings || [],
-    paidLiningNos: id => ((LL && LL.paid) || []).filter(r => r[4] === id).map(r => ({ code: r[0], status: r[1], width: r[3] })),
+    paidLiningNos: id => ((LL && LL.paid) || []).filter(r => r[4] === id).map(r => ({ code: r[0], status: r[1], width: r[3] }))
+      .concat(LP.filter(x => x.group === id).map(x => ({ code: x.code, status: '', width: x.width, photo: x.photo, material: x.material }))),
+    /* 有料裏地で写真のある品番を選んでいれば、その生地ID(3Dの裏地に使う) */
+    paidLiningFabric: st => { const j = st.jacket; if (!j || !j.paidLining || j.paidLining === 'none' || !j.paidLiningNo) return null; const id = lpId(j.paidLiningNo); return byId.has(id) ? id : null; },
     /* 有料裏地: 背抜き系の裏仕様なら「背抜き」の金額を使う。S/D/P は料金表に記載なし */
     liningPrice: (g, key, backless) => { if (!g) return null; const k = backless && /^(suit|three)/.test(key) ? key + '_b' : key; const v = g.prices[k]; return v == null ? null : v; },
     fabric: id => byId.get(id),
@@ -1167,7 +2503,7 @@ window.R = window.R || {};
 
   const cache = new Map();
   const loader = new THREE.TextureLoader();
-  R.fabricKey = f => [f.pattern, f.color, f.accent, f.scale, f.photo, f.photoCm].join('|');
+  R.fabricKey = f => [f.pattern, f.color, f.accent, f.scale, f.photo, f.photoCm, f.photoMirror ? 'm' : ''].join('|');
   R.fabricTexture = function (f, onReady) {
     const k = R.fabricKey(f);
     if (cache.has(k)) return cache.get(k);
@@ -1179,7 +2515,8 @@ window.R = window.R || {};
       const { cv, tile: tl } = drawTile(f); tile = tl;
       tex = new THREE.CanvasTexture(cv);
     }
-    tex.wrapS = tex.wrapT = THREE.RepeatWrapping; tex.colorSpace = THREE.SRGBColorSpace; tex.anisotropy = R.maxAniso || 8;
+    tex.wrapS = tex.wrapT = f.photoMirror ? THREE.MirroredRepeatWrapping : THREE.RepeatWrapping; // 見本帳の写真は折り返して継ぎ目を消す
+    tex.colorSpace = THREE.SRGBColorSpace; tex.anisotropy = R.maxAniso || 8;
     tex.repeat.set(1 / tile, 1 / tile);
     cache.set(k, tex);
     if (cache.size > 80) { const fk = cache.keys().next().value; cache.get(fk).dispose(); cache.delete(fk); }
@@ -1954,6 +3291,19 @@ window.R = window.R || {};
         R.mesh(group, R.ribbonGeo(vp, surfArc, .002, .0034), R.seamMat, { noShadow: true, noReceive: true, order: 2 }).userData.side = side;
       }
       if (p.vent.kind === 'box') R.mesh(group, R.ribbonGeo([[(PI - .012) * RHO, ventTop], [(PI - .042) * RHO, p.hem]], surfArc, .0024, .001), R.seamMat, { noShadow: true, noReceive: true, order: 2 }).userData.side = side;
+      // ベントを見やすく: 重なった身頃の縁の下に落ちる影(ベストの前端と同じ考え方)
+      {
+        const VS = R.ventShadow = R.ventShadow || new THREE.MeshBasicMaterial({ color: 0x000000, transparent: true, opacity: .34, depthWrite: false, side: THREE.DoubleSide, polygonOffset: true, polygonOffsetFactor: -1 });
+        const VL = R.ventLight = R.ventLight || new THREE.MeshBasicMaterial({ color: 0xffffff, transparent: true, opacity: .16, depthWrite: false, side: THREE.DoubleSide, polygonOffset: true, polygonOffsetFactor: -2 });
+        const vsh = (x0, y0, y1, w) => { const pts = []; for (let i = 0; i <= 12; i++) pts.push([x0, R.lerp(y0, y1, i / 12)]); R.mesh(group, R.ribbonGeo(pts, surfArc, w, .0016), VS, { noShadow: true, noReceive: true, order: 2 }).userData.side = side; };
+        const vhl = (x0, y0, y1) => { const pts = []; for (let i = 0; i <= 12; i++) pts.push([x0, R.lerp(y0, y1, i / 12)]); R.mesh(group, R.ribbonGeo(pts, surfArc, .0016, .0038), VL, { noShadow: true, noReceive: true, order: 3 }).userData.side = side; };
+        if (p.vent.kind === 'side') vhl(PHI_SIDE * RHO - .0015, p.hem + .002, ventTop);
+        if (top && p.vent.kind === 'center') vhl((PI + .05) * RHO - .0025, p.hem + .002, ventTop);
+        if (p.vent.kind === 'side') { vsh(PHI_SIDE * RHO - .0105, p.hem + .004, ventTop - .006, .012); vsh(PHI_SIDE * RHO - .0065, p.hem + .004, ventTop - .01, .0045); R.mesh(group, R.ribbonGeo([[PHI_SIDE * RHO - .016, ventTop + .002], [PHI_SIDE * RHO + .004, ventTop + .002]], surfArc, .006, .0016), VS, { noShadow: true, noReceive: true, order: 2 }).userData.side = side; }
+        if (top && p.vent.kind === 'center') { vsh((PI + .05) * RHO + .006, p.hem + .004, ventTop - .006, .011); vsh((PI + .05) * RHO + .003, p.hem + .004, ventTop - .01, .004); }
+        if (top && p.vent.kind === 'hook') vsh((PI + .06) * RHO + .006, p.hem + .004, ventTop - .006, .011);
+        if (p.vent.kind === 'box') { const pts = []; for (let i = 0; i <= 12; i++) { const t = i / 12; pts.push([R.lerp((PI - .012) * RHO, (PI - .042) * RHO, t) + .005, R.lerp(ventTop - .004, p.hem + .004, t)]); } R.mesh(group, R.ribbonGeo(pts, surfArc, .009, .0012), R.softShadow, { noShadow: true, noReceive: true, order: 2 }).userData.side = side; }
+      }
       // 前ダーツ
       const dart = [];
       for (let i = 0; i <= 18; i++) { const t = i / 18, y = R.lerp(1.1, 1.28, t); dart.push([R.lerp(.122, .105, t) + .009 * Math.sin(t * PI), y]); }
@@ -2730,6 +4080,24 @@ window.R = window.R || {};
         R.mesh(group, R.ribbonGeo(sh, (u, y, h, out) => { vestRing(y, buf); R.ringPt(buf, side, PI / 2, h, out); out.y = y; return out; }, .0014, .0006), R.seamMat, { noShadow: true, noReceive: true, order: 2 }); }
       // 前ダーツ
       R.mesh(group, R.ribbonGeo([[.078, 1.05], [.083, 1.11], [.079, 1.19]], (u, y, h, out) => { vestRing(y, buf); const ph = u / RHO; R.ringPt(buf, side, ph, h + off * R.sstep(1.4, .6, ph) + .0007, out); out.y = y; return out; }, .0012, .0007), R.seamMat, { noShadow: true, noReceive: true, order: 2 });
+      // 前端と裾の「厚み・影」: 同じ生地のパンツやもう一方の身頃と溶け合わず、ベストと分かるように
+      {
+        const vS = (X, y, h, out) => vfront(side * X, y, h, out);
+        const hemPt = (u, y, h, out) => { vestRing(y, buf); const ph0 = R.xToPhi(buf, edgeX(y), off), phi = R.lerp(ph0, armPhi(y), u); R.ringPt(buf, side, phi, h, out); out.y = y; return out; };
+        // 前端: 上側の身頃(ダブルは重なりの上の前端、交差点まで)。下になる身頃は上の身頃に隠れるので描かない
+        if (top || !dbl) {
+          const yEnd = dbl ? yV + (Yn - yV) * Math.pow(ov / (Xn + ov), 1 / .95) : Yn - .03;
+          const edge = []; for (let i = 0; i <= 40; i++) { const y = R.lerp(yBot(0) + .002, yEnd, i / 40); edge.push([edgeX(y), y]); }
+          // 下の身頃に落ちる影(前端の外側)
+          R.mesh(group, R.ribbonGeo(edge.map(([x, y]) => [x - .0045, y]), vS, .008, .0012), R.softShadow, { noShadow: true, noReceive: true, order: 2 });
+          // 前端の縁(厚み)
+          R.mesh(group, R.ribbonGeo(edge.map(([x, y]) => [x + .0009, y]), vS, .0018, off + .0011), R.seamMat, { noShadow: true, noReceive: true, order: 3 });
+        }
+        // 裾: 縁の線と、パンツに落ちる影
+        const hem = [], hemS = []; for (let i = 0; i <= 40; i++) { const u = i / 40; hem.push([u, yBot(u) + .0016]); hemS.push([u, yBot(u) - .0045]); }
+        R.mesh(group, R.ribbonGeo(hem, hemPt, .0016, off + .0011), R.seamMat, { noShadow: true, noReceive: true, order: 3 });
+        R.mesh(group, R.ribbonGeo(hemS, hemPt, .009, -.0012), R.softShadow, { noShadow: true, noReceive: true, order: 2 });
+      }
       // 内側(裏地)
       const I = R.gridGeo(30, 44, (u, w, out, t) => {
         const y = R.lerp(yBot(u), topY(u), w); vestRing(y, r);
@@ -2745,7 +4113,9 @@ window.R = window.R || {};
         const N = f.lapel === 'peak' ? [rx(yG - .03) + w * 1.1, yG - .005] : [rx(yG - .03) + w, yG - .03];
         const mid = [(roll[0][0] + N[0]) / 2 + .005, (roll[0][1] + N[1]) / 2];
         const poly = roll.concat(f.lapel === 'peak' ? [[rx(yG) + .02, yG - .022]] : []).concat(R.bez(N, mid, roll[0], 12).slice(0, -1));
-        R.mesh(group, R.polyGeo(poly, sf, { L: .009, thick: .0028, edge: .005, base: top ? .003 : .0005, flip: side < 0, uv: (x, y) => [x * side, y] }), OUT);
+        // ダブル: 下になる身頃のラペルは、上の身頃に隠れる部分を切り取る(透けて見えないように)
+        const vis = dbl && !top ? R.clipByCurve(poly, (X, y) => X + edgeX(y), y => -edgeX(y)) : poly;
+        if (vis.length >= 3) R.mesh(group, R.polyGeo(vis, sf, { L: .009, thick: .0028, edge: .005, base: top ? .003 : .0005, flip: side < 0, uv: (x, y) => [x * side, y] }), OUT);
       }
       // ステッチ
       const sx = o('stitch');
@@ -2940,17 +4310,7 @@ window.R = window.R || {};
         const seamRing = []; for (let i = 0; i <= 40; i++) seamRing.push([i / 40 * PI, y1]);
         R.mesh(group, R.ribbonGeo(seamRing, (a, y, h, out) => { const r = rBand(y); R.ringPt(r, side, a, h, out); out.y = y; return out; }, .0014, .0028), R.seamMat, { noShadow: true, noReceive: true, order: 2 });
       }
-      // ベルト(ループ付きのとき)
-      if (belt.loop) {
-        const bm2 = R.beltMat = R.beltMat || new THREE.MeshPhysicalMaterial({ color: '#0c0b0b', roughness: .36, clearcoat: .5, clearcoatRoughness: .3 });
-        const by0 = y1 + .0035, by1 = top - .0035;
-        for (const side of [1, -1]) {
-          const bg = R.gridGeo(52, 3, (u, v, out, t) => { const y = R.lerp(by0, by1, v), r = rBand(y); R.ringPt(r, side, u * PI, .0042 + .0007 * Math.sin(v * PI), out); out.y = y; t[0] = u; t[1] = v; }, { flip: side < 0 });
-          R.mesh(group, bg, bm2);
-        }
-        const r0 = rBand((by0 + by1) / 2), bp = new V(); R.ringPt(r0, 1, 0, .007, bp); bp.y = (by0 + by1) / 2;
-        const bk = new THREE.Mesh(new THREE.BoxGeometry(.046, .036, .006), R.buckleMat = R.buckleMat || new THREE.MeshStandardMaterial({ color: '#b9b4a6', roughness: .35, metalness: 1 })); bk.position.copy(bp); bk.castShadow = true; group.add(bk);
-      }
+      // 革ベルトは描かない(黒く残り、生地の色と合わない。ベルト通しと腰帯は生地で描く)
       // ベルトループ
       const loopAt = belt.loop ? [.55, 1.15, 2.2, 2.85] : [];
       const af = (side, phi) => (x, y, h, out) => { const r = rBand(y); R.ringPt(r, side, phi + x / .145, h, out); out.y = y; return out; };
@@ -3075,8 +4435,8 @@ window.R = window.R || {};
   ];
   /* 生地(素材)の割り当て: マテリアル名 → 状態のどの生地を使うか */
   R.MATERIAL_SLOTS = {
-    jacket: st => ['jacket', 'fabric', st.jacket.fabric], jacketLining: st => ['jacket', 'lining', st.jacket.lining],
-    vest: st => ['vest', 'fabric', st.vest.fabric], vestLining: st => ['vest', 'lining', st.vest.lining],
+    jacket: st => ['jacket', 'fabric', st.jacket.fabric], jacketLining: st => { const p = R.Brands && R.Brands.paidLiningFabric(st); return p ? [null, null, p] : ['jacket', 'lining', st.jacket.lining]; },
+    vest: st => ['vest', 'fabric', st.vest.fabric], vestLining: st => { const p = R.Brands && R.Brands.paidLiningFabric(st); return p ? [null, null, p] : ['vest', 'lining', st.vest.lining]; },
     pants: st => ['pants', 'fabric', st.pants.fabric], shirt: st => ['shirt', 'fabric', st.shirt.fabric],
     cleric: st => [null, null, st.shirt.clericFabric],
   };
@@ -3887,7 +5247,7 @@ window.R = window.R || {};
   function renderInsideTag() {
     const tag = $('#insideTag');
     if (S.mode !== 'inside') { tag.hidden = true; return; }
-    const l = R.opt('jacket', 'liningSpec', st.jacket.liningSpec), f = R.fabricOf(st.jacket.lining);
+    const l = R.opt('jacket', 'liningSpec', st.jacket.liningSpec), f = R.fabricOf(R.Brands.paidLiningFabric(st) || st.jacket.lining);
     tag.hidden = false;
     tag.innerHTML = `<strong>${esc(l.label)}${l.code ? ` (${esc(l.code)})` : ''}</strong>裏地: ${esc(f.name || '')}<br>袖裏: ${l.noSleeve ? 'なし' : 'あり'}`;
   }
@@ -3914,7 +5274,7 @@ window.R = window.R || {};
     if (it.type === 'emb') return { label: v.design === 'なし' ? 'なし' : `${v.design} / ${v.color} / ${v.pos}`, text: '刺繍' };
     const o = R.opt(g, it.key, v);
     if (it.type === 'hole') { const ps = (st.jacket.holePos || []).map(k => (R.HOLE_POS.find(x => x[0] === k) || [k, k])[1]); return { label: o.id === 'none' ? o.label : `${o.label} / ${ps.length ? ps.join('・') : '場所未選択'}`, svg: R.thumb(g, it.key, o, st) }; }
-    if (it.type === 'paidLining' && o.id !== 'none' && st.jacket.paidLiningNo) return { label: `${o.label} / ${st.jacket.paidLiningNo}`, svg: R.thumb(g, it.key, o, st) };
+    if (it.type === 'paidLining' && o.id !== 'none' && st.jacket.paidLiningNo) { const pf = R.Brands.paidLiningFabric(st), f = pf && R.fabricOf(pf); return f ? { label: `${o.label} / ${st.jacket.paidLiningNo}`, ic: `url('${f.photo}')` } : { label: `${o.label} / ${st.jacket.paidLiningNo}`, svg: R.thumb(g, it.key, o, st) }; }
     return { label: o.label, svg: R.thumb(g, it.key, o, st) };
   }
   const applyFine = (f, g, key) => { const ov = st.fine && st.fine[g + '.' + key]; return ov ? Object.assign({}, f, ov) : f; };
@@ -4057,7 +5417,8 @@ window.R = window.R || {};
     if (st.jacket.paidLining === 'none') return '';
     const nos = R.Brands.paidLiningNos(st.jacket.paidLining);
     return `<div class="sect">品番</div><div class="tools" style="padding-top:0"><input class="input" id="plNo" list="plNos" maxlength="30" placeholder="品番を入力(任意)" value="${esc(st.jacket.paidLiningNo || '')}"><datalist id="plNos">${nos.map(x => `<option value="${esc(x.code)}">${esc(x.status)}</option>`).join('')}</datalist></div>
-      ${nos.length ? `<div class="chips">${nos.map(x => `<button type="button" class="chip ${st.jacket.paidLiningNo === x.code ? 'on' : ''} ${/品切れ/.test(x.status) ? 'dimchip' : ''}" data-pln="${esc(x.code)}">${esc(x.code)}${x.status !== '在庫あり' ? ' ' + esc(x.status) : ''}</button>`).join('')}</div>` : ''}`;
+      ${nos.some(x => x.photo) ? `<div class="bgrid lgrid" style="padding:0 14px">${nos.filter(x => x.photo).map(x => `<button type="button" class="bcard ${st.jacket.paidLiningNo === x.code ? 'on' : ''}" data-pln="${esc(x.code)}" aria-pressed="${st.jacket.paidLiningNo === x.code}"><img src="${x.photo}" alt="" loading="lazy"><b>${esc(x.code)}</b><small>${esc(x.material || '')}</small></button>`).join('')}</div>` : ''}
+      ${nos.some(x => !x.photo) ? `<div class="chips">${nos.filter(x => !x.photo).map(x => `<button type="button" class="chip ${st.jacket.paidLiningNo === x.code ? 'on' : ''} ${/品切れ/.test(x.status) ? 'dimchip' : ''}" data-pln="${esc(x.code)}">${esc(x.code)}${x.status !== '在庫あり' ? ' ' + esc(x.status) : ''}</button>`).join('')}</div>` : ''}`;
   }
   function clericParts() {
     const it = R.CAT.shirt.find(i => i.key === 'cleric');
@@ -4121,7 +5482,11 @@ window.R = window.R || {};
         if (g === 'jacket' && ui.item === 'stitchWidth') { if (opt.dataset.o === '01') st.jacket.stitchWhere = '01'; else if (st.jacket.stitchWhere === '01') st.jacket.stitchWhere = '02'; } // 巾と箇所を食い違わせない
         st[g][ui.item] = opt.dataset.o; const it = items(g).find(i => i.key === ui.item); commit(); focusAfter(it); renderPanel(true); return; }
       const fb = e.target.closest('[data-f]');
-      if (fb) { st[g][ui.item] = fb.dataset.f; if (st.fine) delete st.fine[fineKey(g, ui.item)]; commit(); renderPanel(true); return; }
+      if (fb) {
+        st[g][ui.item] = fb.dataset.f; if (st.fine) delete st.fine[fineKey(g, ui.item)];
+        // ジャケットの生地を選ぶと、ベスト・パンツも同じ生地に揃える(各項目であとから個別に変更できる)
+        if (g === 'jacket' && ui.item === 'fabric') for (const k of ['vest', 'pants']) { st[k].fabric = fb.dataset.f; if (st.fine) delete st.fine[fineKey(k, 'fabric')]; }
+        commit(); renderPanel(true); return; }
       const brc = e.target.closest('[data-br]');
       if (brc) { B().brand = brc.dataset.br; B().coll = 'all'; B().q = ''; renderPanel(true); return; }
       const bcc = e.target.closest('[data-bc]');
@@ -4480,19 +5845,14 @@ window.R = window.R || {};
     if (est.tab === 'fabric' && B().brand) body = brandChips(B().brand) + brandBrowser(st.jacket.fabric, 'data-pickb');
     else if (est.tab === 'fabric') body = brandChips('') + `<input class="input esearch" id="eq" type="search" placeholder="生地名・品番・ブランドで検索" value="${esc(est.q)}"><div class="egrid">${fabs.filter(hit).map(f => card('fabric', f.id, st.jacket.fabric === f.id, `background-image:${swatch(f)}`, f.name, [f.code, f.brand].filter(Boolean).join(' / '), priceOf.fabric(f))).join('') || '<p class="empty">該当する生地がありません</p>'}</div>`;
     else if (est.tab === 'lining') body = `<h3 class="esect">裏地</h3>` + brandChips(B().brand) + (B().brand ? brandBrowser(st.jacket.lining, 'data-pickl') : `<div class="egrid">${lins.map(f => card('lining', f.id, st.jacket.lining === f.id, `background-image:${swatch(f)}`, f.name, [f.code, f.brand].filter(Boolean).join(' / '), priceOf.fabric(f))).join('')}</div>`)
-      + `<h3 class="esect">有料裏地</h3>` + paidCards('paidLining') + (st.jacket.paidLining !== 'none' ? (() => { const nos = R.Brands.paidLiningNos(st.jacket.paidLining); return `<h3 class="esect">有料裏地の品番</h3><input class="input esearch" id="ePlNo" list="ePlNos" maxlength="30" placeholder="品番を入力(任意)" value="${esc(st.jacket.paidLiningNo || '')}"><datalist id="ePlNos">${nos.map(x => `<option value="${esc(x.code)}">`).join('')}</datalist>${nos.length ? `<div class="chips" style="padding:0">${nos.map(x => `<button type="button" class="chip ${st.jacket.paidLiningNo === x.code ? 'on' : ''}" data-pln="${esc(x.code)}">${esc(x.code)}${x.status !== '在庫あり' ? ' ' + esc(x.status) : ''}</button>`).join('')}</div>` : ''}`; })() : '');
+      + `<h3 class="esect">有料裏地</h3>` + paidCards('paidLining') + (st.jacket.paidLining !== 'none' ? (() => { const nos = R.Brands.paidLiningNos(st.jacket.paidLining); return `<h3 class="esect">有料裏地の品番</h3><input class="input esearch" id="ePlNo" list="ePlNos" maxlength="30" placeholder="品番を入力(任意)" value="${esc(st.jacket.paidLiningNo || '')}"><datalist id="ePlNos">${nos.map(x => `<option value="${esc(x.code)}">`).join('')}</datalist>${nos.some(x => x.photo) ? `<div class="bgrid lgrid">${nos.filter(x => x.photo).map(x => `<button type="button" class="bcard ${st.jacket.paidLiningNo === x.code ? 'on' : ''}" data-pln="${esc(x.code)}"><img src="${x.photo}" alt="" loading="lazy"><b>${esc(x.code)}</b><small>${esc(x.material || '')}</small></button>`).join('')}</div>` : ''}${nos.some(x => !x.photo) ? `<div class="chips" style="padding:0">${nos.filter(x => !x.photo).map(x => `<button type="button" class="chip ${st.jacket.paidLiningNo === x.code ? 'on' : ''}" data-pln="${esc(x.code)}">${esc(x.code)}${x.status !== '在庫あり' ? ' ' + esc(x.status) : ''}</button>`).join('')}</div>` : ''}`; })() : '');
     else if (est.tab === 'button') { const opts = R.CAT.jacket.find(i => i.key === 'button').options, groups = [...new Set(opts.map(o => o.group))];
       body = groups.map(gr => `<h3 class="esect">${esc(gr)}</h3><div class="bgrid">${opts.filter(o => o.group === gr).map(o => `<button type="button" class="bcard ${st.jacket.button === o.id ? 'on' : ''}" data-pick="button" data-id="${esc(o.id)}" aria-pressed="${st.jacket.button === o.id}">${o.photo ? `<img src="${o.photo}" alt="" loading="lazy">` : `<span class="bdot" style="background:${o.color}"></span>`}<b>${esc(o.label)}</b>${o.detail ? `<small>${esc(o.detail)}</small>` : ''}</button>`).join('')}</div>`).join('') ; }
     else if (est.tab === 'make') body = makePicker();
     else body = R.OPTION_GROUPS.map(g => `<h3 class="esect">${esc(g.label)}</h3><div class="optlist">${R.OPTION_PRICES.filter(o => o.group === g.id).map(o => `<label class="optrow ${st.options[o.id] ? 'on' : ''} ${linkOf(o.id) ? 'linked' : ''}"><input type="checkbox" data-eop="${o.id}" ${st.options[o.id] ? 'checked' : ''} ${linkOf(o.id) ? 'disabled' : ''}><span class="n">${esc(o.label)}${linkOf(o.id) ? `<small>自動: ${esc(linkOf(o.id).why)}</small>` : ''}</span><span class="p">${o.fabricKey ? (() => { const f = Store.fabric(st.jacket.fabric); const v = f && f.brandFabric ? R.Brands.price(f, o.fabricKey) : null; return v == null ? '<span class="unset">生地の料金表で決まります</span>' : yen(v); })() : yenOr(o.price, o.note)}</span></label>`).join('')}</div>`).join('');
     const tabs = [['make', '作り方'], ['fabric', '生地'], ['button', 'ボタン'], ['lining', '裏地'], ['option', 'オプション']];
-    estEl.innerHTML = `<header class="ehead"><button class="tbtn" type="button" id="eBack">← 3D表示に戻る</button><h2>お見積もり</h2><span class="spacer"></span><button class="tbtn ${est.edit ? 'primary' : ''}" type="button" id="eEdit" aria-pressed="${est.edit}">${est.edit ? '金額の設定を終える' : '金額を設定'}</button></header>
-      <div class="ebody">
-        <div class="emain">
-          <nav class="etabs" role="tablist">${tabs.map(([k, l]) => `<button type="button" role="tab" aria-selected="${est.tab === k}" class="${est.tab === k ? 'on' : ''}" data-et="${k}">${l}</button>`).join('')}</nav>
-          ${est.edit && est.tab !== 'option' ? `<p class="note">店舗で使う金額を入力してください(円)。入力した金額は${Store.cloud ? '端末間で共有' : 'この端末'}に保存されます。オプションの金額は料金表の卸料金(卸値+ロイヤリティ)です。</p>` : ''}
-          ${body}
-        </div>
+    estEl.innerHTML = `<header class="ehead"><button class="tbtn" type="button" id="eBack">← 3D表示に戻る</button><h2>お見積もり</h2><span class="spacer"></span></header>
+      <div class="ebody only">
         <aside class="esum" aria-live="polite">
           <h3>見積もり明細</h3>
           <table class="etable"><tbody>${lines.map(l => `<tr><th>${esc(l.k)}</th><td>${esc(l.name)}${l.src ? `<small>${esc(l.src)}</small>` : ''}</td><td class="num">${est.line === l.key ? `<input class="pin" type="number" min="0" step="1" inputmode="numeric" id="eLine" data-line="${esc(l.key)}" value="${l.price == null ? '' : l.price}" aria-label="${esc(l.name)}の金額">` : `<button type="button" class="eamt" data-eline="${esc(l.key)}" title="金額を手入力">${yenOr(l.price, l.note)}<span aria-hidden="true">✎</span></button>`}${l.manual ? `<small class="man">手入力 <button type="button" class="linkbtn" data-eauto="${esc(l.key)}">自動に戻す</button></small>` : ''}</td></tr>`).join('')}</tbody></table>
